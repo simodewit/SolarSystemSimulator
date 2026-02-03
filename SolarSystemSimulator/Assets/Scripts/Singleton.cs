@@ -39,4 +39,9 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void SpawnInstance()
+    {
+        // Is now instantiated
+    }
 }

@@ -2,24 +2,27 @@ using UnityEngine;
 
 public class PlanetModelButton : MonoBehaviour
 {
-    private void OnPlanetClicked()
+    [SerializeField] private PlanetManager _planetManager;
+    public void OnPlanetClicked()
     {
-
+        //Testing checking if function works
+        Debug.Log($"{gameObject.name} is geselecteerd");
+        _planetManager.LockToPlanet(this);
     }
 
-    private void OnPlanetHover()
+    public void OnPlanetHover()
     {
-        // Testing kijken of de functie werkt
+        // Testing checking if function works
         Debug.Log($"{gameObject.name} is gehoverd.");
 
-        // Laat het planeet hover effect zien.
+        // show planet hover shader
     }
 
-    private void OnPlanetUnHover()
+    public void OnPlanetUnHover()
     {
-        // Testing kijken of de functie werkt
+        // Testing checking if function works
         Debug.Log($"{gameObject.name} is niet meer gehoverd.");
 
-        // Zet het planeet hover effect uit.
+        // hide planet hover shader
     }
 }
