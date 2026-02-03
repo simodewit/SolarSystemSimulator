@@ -215,7 +215,7 @@ public class NavigationController : MonoBehaviour
         
         var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();
         var speedCalculation = mouseDelta * _rotateSpeed;
-        var movement = new Vector3(speedCalculation.y, speedCalculation.x, 0f) * Time.deltaTime;
+        var movement = new Vector3(speedCalculation.y, -speedCalculation.x, 0f) * Time.deltaTime;
         
         _pivotPoint.eulerAngles += movement;
     }
