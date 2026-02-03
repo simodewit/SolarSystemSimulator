@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlanetManager : MonoBehaviour
 {
     private PlanetModelButton _currentPlanet;
+    private Coroutine _cameraLerpCoroutine;
     [SerializeField] private Transform _camHolder;
 
     [SerializeField] private NavigationController _navigationController;
@@ -21,16 +22,22 @@ public class PlanetManager : MonoBehaviour
     }
     public void LockToPlanet(PlanetModelButton planetToLockOn)
     {
+        if (_currentPlanet != null)
+        {
+            LetPlanetGo();
+        }
         _currentPlanet = planetToLockOn;
 
-        //first stop all coroutines before starting the new one
-        StopAllCoroutines();
+        //first stop cameralerpcoroutine
+        if (_cameraLerpCoroutine != null)
+            StopCoroutine(_cameraLerpCoroutine);
 
         _camHolder.SetParent(planetToLockOn.transform);
         _navigationController.ToggleMovement(false);
-        Coroutine cameraLerp = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position));
+        _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position));
         StartCoroutine(LerpAlphaPanel(1,0,_galaxyPanel));
         StartCoroutine(LerpAlphaPanel(0,1,_planetPanel));
+        StartCoroutine(LerpAlphaPanel(0,1,planetToLockOn.GetPlanetInfoPanel()));
     }
 
     private void LetPlanetGo()
@@ -41,6 +48,7 @@ public class PlanetManager : MonoBehaviour
             _camHolder.SetParent(null);
             StartCoroutine(LerpAlphaPanel(0,1,_galaxyPanel));
             StartCoroutine(LerpAlphaPanel(1,0, _planetPanel));
+            StartCoroutine(LerpAlphaPanel(1, 0, _currentPlanet.GetPlanetInfoPanel()));
             _currentPlanet = null;
         }
     }

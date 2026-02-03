@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aarde
       objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetManager
+      value: 
+      objectReference: {fileID: 2048203772}
     - target: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_Name
       value: Aarde
@@ -178,30 +182,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1198358851}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
---- !u!1 &74018760 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
-  m_PrefabInstance: {fileID: 1897897327}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &74018765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74018760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed37eb7bbf00aef44885d2561df0ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlanetModelButton
-  _planetManager: {fileID: 2048203772}
-  _sceneIndex: 0
 --- !u!1 &414374151
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,8 +213,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4103bacfc2979cd40bedb8003a29f08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NavigationController
+  _cameraDistance: -20
+  _pivotPointPosition: {x: 0, y: 0, z: 0}
+  _pivotPointRotation: {x: 0.5, y: 0.5, z: 0.5}
   _pivotPoint: {fileID: 0}
-  _speed: 0
+  _camera: {fileID: 1488729224}
+  _moveSpeed: 5
+  _rotateSpeed: 5
+  _scrollSpeed: 5
   _virtualBoxTarget: {fileID: 845687967}
   _virtualBoxSize: {x: 30, y: 10, z: 30}
 --- !u!4 &414374153
@@ -560,25 +548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130906408}
   m_CullTransparentMesh: 1
---- !u!1 &1198358846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
-  m_PrefabInstance: {fileID: 7810373}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1198358851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198358846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed37eb7bbf00aef44885d2561df0ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlanetModelButton
-  _planetManager: {fileID: 2048203772}
-  _sceneIndex: 0
 --- !u!1 &1362342957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zon
       objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetManager
+      value: 
+      objectReference: {fileID: 2048203772}
     - target: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_Name
       value: Zon
@@ -1521,10 +1494,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 74018765}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
 --- !u!1 &2048203771
 GameObject:

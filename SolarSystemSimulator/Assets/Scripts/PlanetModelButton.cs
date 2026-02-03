@@ -5,6 +5,7 @@ public class PlanetModelButton : MonoBehaviour
     [SerializeField] private PlanetManager _planetManager;
 
     [SerializeField] private int _sceneIndex;
+    [SerializeField] private CanvasGroup _canvasGroup;
     public void OnPlanetClicked()
     {
         //Testing checking if function works
@@ -31,5 +32,10 @@ public class PlanetModelButton : MonoBehaviour
     public int GetSceneIndex()
     {
         return _sceneIndex;
+    }
+
+    public CanvasGroup GetPlanetInfoPanel()
+    {
+        return _canvasGroup;
     }
 }
