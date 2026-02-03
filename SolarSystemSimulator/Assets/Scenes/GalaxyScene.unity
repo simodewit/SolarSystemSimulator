@@ -216,7 +216,7 @@ MonoBehaviour:
   _cameraDistance: -20
   _pivotPointPosition: {x: 0, y: 0, z: 0}
   _pivotPointRotation: {x: 0.5, y: 0.5, z: 0.5}
-  _pivotPoint: {fileID: 0}
+  _pivotPoint: {fileID: 1362342958}
   _camera: {fileID: 1488729224}
   _moveSpeed: 5
   _rotateSpeed: 5
@@ -1532,6 +1532,7 @@ MonoBehaviour:
   _alphaLerpDuration: 1
   _cameraLerpDuration: 1.5
   _cameraOffset: 0
+  _distanceCamToPlanetFactor: 3
 --- !u!4 &2048203773
 Transform:
   m_ObjectHideFlags: 0

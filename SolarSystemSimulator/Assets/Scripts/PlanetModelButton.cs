@@ -6,6 +6,9 @@ public class PlanetModelButton : MonoBehaviour
 
     [SerializeField] private int _sceneIndex;
     [SerializeField] private CanvasGroup _canvasGroup;
+
+    
+    [SerializeField] private Renderer _planetRenderer;
     public void OnPlanetClicked()
     {
         //Testing checking if function works
@@ -38,4 +41,11 @@ public class PlanetModelButton : MonoBehaviour
     {
         return _canvasGroup;
     }
+    
+    public float GetPlanetBounds()
+    {
+        Vector3 maxBounds = _planetRenderer.bounds.max;
+        return Mathf.Max( maxBounds.x, maxBounds.y, maxBounds.z );
+    }
+
 }

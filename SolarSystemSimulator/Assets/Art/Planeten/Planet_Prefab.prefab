@@ -392,6 +392,7 @@ MonoBehaviour:
   _planetManager: {fileID: 0}
   _sceneIndex: 0
   _canvasGroup: {fileID: 7707119566860308666}
+  _planetRenderer: {fileID: 7646597402915558049}
 --- !u!135 &7475950515803174523
 SphereCollider:
   m_ObjectHideFlags: 0

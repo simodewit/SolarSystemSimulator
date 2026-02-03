@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class PlanetManager : MonoBehaviour
@@ -6,6 +7,7 @@ public class PlanetManager : MonoBehaviour
     private PlanetModelButton _currentPlanet;
     private Coroutine _cameraLerpCoroutine;
     [SerializeField] private Transform _camHolder;
+    private Camera _cam;
 
     [SerializeField] private NavigationController _navigationController;
 
@@ -15,10 +17,12 @@ public class PlanetManager : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField] private float _cameraLerpDuration;
     [SerializeField] private float _cameraOffset;
+    [SerializeField] private float _distanceCamToPlanetFactor;
     private void Start()
     {
         InputManager.Instance.SpawnInstance();
         _navigationController.isPanning += LetPlanetGo;
+        _cam = Camera.main;
     }
     public void LockToPlanet(PlanetModelButton planetToLockOn)
     {
@@ -34,7 +38,7 @@ public class PlanetManager : MonoBehaviour
 
         _camHolder.SetParent(planetToLockOn.transform);
         _navigationController.ToggleMovement(false);
-        _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position));
+        _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position, _cam.transform.localPosition.z, GetCamZPosition()));
         StartCoroutine(LerpAlphaPanel(1,0,_galaxyPanel));
         StartCoroutine(LerpAlphaPanel(0,1,_planetPanel));
         StartCoroutine(LerpAlphaPanel(0,1,planetToLockOn.GetPlanetInfoPanel()));
@@ -64,10 +68,15 @@ public class PlanetManager : MonoBehaviour
             Debug.LogError("There is no planet selected");
             return 0;
         }
-        // Wanneer het script dat de scene laad komt laad je hiermee de goede scene in
+        // When the scene load script is made this function returns the selected planets scene index
     }
 
-    private IEnumerator LerpCameraToTarget(Vector3 cameraStartPos, Vector3 cameraTargetPos)
+    private float GetCamZPosition()
+    {
+        Debug.Log(_currentPlanet.GetPlanetBounds());
+        return _distanceCamToPlanetFactor * -_currentPlanet.GetPlanetBounds();
+    }
+    private IEnumerator LerpCameraToTarget(Vector3 cameraHolderStartPos, Vector3 cameraHolderTargetPos, float cameraStartZPos, float cameraTargetZPos)
     {
         float elapsed = 0f;
 
@@ -75,14 +84,16 @@ public class PlanetManager : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Lerp(0,1, elapsed / _cameraLerpDuration);
-            _camHolder.position = Vector3.Lerp(cameraStartPos, cameraTargetPos, t);
+            _camHolder.position = Vector3.Lerp(cameraHolderStartPos, cameraHolderTargetPos, t);
+            float camZPosition = Mathf.Lerp(cameraStartZPos, cameraTargetZPos, t);
+            _cam.transform.position = new Vector3(_cam.transform.localPosition.x, _cam.transform.localPosition.y, camZPosition);
 
             yield return null;
         }
 
         // when lerp is finished
         // Ensure exact position at the end
-        _camHolder.transform.position = cameraTargetPos;
+        _camHolder.transform.position = cameraHolderTargetPos;
         
         _navigationController.ToggleMovement(true);
     }
