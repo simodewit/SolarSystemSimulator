@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sun
+  m_Name: Lava 1
   m_Shader: {fileID: -6465566751694194690, guid: f02072deae261124482a9f7e522629a6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -51,15 +51,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortioScale: 203.9
+    - _DistortioScale: 64.62
     - _NoisePower: 4
     - _NoiseScale: 100
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TwirlStrength: 28
+    - _TwirlStrength: -13.3
     m_Colors:
-    - _BaseColor: {r: 271.17407, g: 67.009315, b: 0, a: 1}
-    - _Glow: {r: 1, g: 0.7382692, b: 0, a: 1}
+    - _BaseColor: {r: 31.486023, g: 2.079621, b: 0, a: 0}
     - _PanSpeed: {r: 0.1, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
