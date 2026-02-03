@@ -74,19 +74,20 @@ public class PlanetManager : MonoBehaviour
     private float GetCamZPosition()
     {
         Debug.Log(_currentPlanet.GetPlanetBounds());
-        return _distanceCamToPlanetFactor * -_currentPlanet.GetPlanetBounds();
+        return _distanceCamToPlanetFactor * _currentPlanet.GetPlanetBounds();
     }
     private IEnumerator LerpCameraToTarget(Vector3 cameraHolderStartPos, Vector3 cameraHolderTargetPos, float cameraStartZPos, float cameraTargetZPos)
     {
         float elapsed = 0f;
-
         while (elapsed < _cameraLerpDuration)
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Lerp(0,1, elapsed / _cameraLerpDuration);
             _camHolder.position = Vector3.Lerp(cameraHolderStartPos, cameraHolderTargetPos, t);
-            float camZPosition = Mathf.Lerp(cameraStartZPos, cameraTargetZPos, t);
-            _cam.transform.position = new Vector3(_cam.transform.localPosition.x, _cam.transform.localPosition.y, camZPosition);
+
+            Vector3 localPos = _cam.transform.localPosition;
+            localPos.z = Mathf.Lerp(cameraStartZPos, -cameraTargetZPos, t);
+            _cam.transform.localPosition = localPos;
 
             yield return null;
         }

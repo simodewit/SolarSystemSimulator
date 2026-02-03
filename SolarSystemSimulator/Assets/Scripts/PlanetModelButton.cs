@@ -45,7 +45,7 @@ public class PlanetModelButton : MonoBehaviour
     public float GetPlanetBounds()
     {
         Vector3 maxBounds = _planetRenderer.bounds.max;
-        return Mathf.Max( maxBounds.x, maxBounds.y, maxBounds.z );
+        return maxBounds.y;
     }
 
 }
