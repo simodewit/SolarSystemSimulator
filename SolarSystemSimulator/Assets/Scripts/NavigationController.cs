@@ -192,8 +192,10 @@ public class NavigationController : MonoBehaviour
             return;
         }
         
+        isPanning?.Invoke();
+        
         var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();
-        var speedCalculation = mouseDelta * _moveSpeed;
+        var speedCalculation = -mouseDelta * _moveSpeed;
         var movement = new Vector3(speedCalculation.x, speedCalculation.y, 0f) * Time.deltaTime;
         
         _pivotPoint.position += movement;
