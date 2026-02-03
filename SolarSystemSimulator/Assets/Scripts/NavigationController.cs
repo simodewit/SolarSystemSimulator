@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 /// <summary>
 /// This controller is used in the galaxy scene to move around and observe the galaxy.
@@ -11,7 +10,7 @@ public class NavigationController : MonoBehaviour
     
     [Header("Spawning")]
     [Tooltip("The distance of the camera to the pivot point at startup.")]
-    [SerializeField] private float _cameraDistance = 5f;
+    [SerializeField] private float _cameraDistance = -5f;
     [Tooltip("The position of the pivot point at startup.")]
     [SerializeField] private Vector3 _pivotPointPosition = new(0f,0f,0f);
     [Tooltip("The rotation of the pivot point at startup.")]
@@ -38,7 +37,7 @@ public class NavigationController : MonoBehaviour
     [HideInInspector] public Action isPanning;
     
     private Bounds _virtualBox;
-    private bool _enableMovement;
+    private bool _enableMovement = true;
     
     #endregion
     
@@ -49,13 +48,8 @@ public class NavigationController : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        GetObjectReferences();
         CreateVirtualBox();
-
-        if (_pivotPoint == null)
-        {
-            _pivotPoint = transform;
-        }
-
         SetCameraOffset();
         SetPivotPointOffset();
     }
@@ -80,11 +74,41 @@ public class NavigationController : MonoBehaviour
     #region Spawning
 
     /// <summary>
+    /// Sets any references that haven't been referenced.
+    /// </summary>
+    private void GetObjectReferences()
+    {
+        if (_pivotPoint == null)
+        {
+            _pivotPoint = transform;
+        }
+
+        if (_camera == null)
+        {
+            _camera = transform;
+        }
+
+        var pivotPointID = _pivotPoint.gameObject.GetInstanceID();
+        var cameraID = _camera.gameObject.GetInstanceID();
+
+        if (pivotPointID == cameraID)
+        {
+            Debug.LogError($"WATCH OUT. You set the camera and pivot as the same reference, this WILL BREAK THE CONTROLLER. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
+        }
+    }
+    
+    /// <summary>
     /// Set the distance of the camera from the pivot point when spawning.
     /// </summary>
     private void SetCameraOffset()
     {
-        _camera.position = new Vector3(0,0,_cameraDistance);
+        if (_camera == null)
+        {
+            Debug.LogWarning($"Camera not set, cannot set it's position. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
+            return;
+        }
+        
+        _camera.localPosition = new Vector3(0,0,_cameraDistance);
     }
 
     /// <summary>
@@ -92,6 +116,12 @@ public class NavigationController : MonoBehaviour
     /// </summary>
     private void SetPivotPointOffset()
     {
+        if (_pivotPoint == null)
+        {
+            Debug.LogWarning($"Pivot point not set, cannot set it's position and rotation. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
+            return;
+        }
+        
         _pivotPoint.position = _pivotPointPosition;
         _pivotPoint.eulerAngles = _pivotPointRotation;
     }
@@ -107,7 +137,7 @@ public class NavigationController : MonoBehaviour
     {
         if (_virtualBoxTarget == null)
         {
-            Debug.Log($"Virtual box target not set, cannot create virtual box. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
+            Debug.LogWarning($"Virtual box target not set, cannot create virtual box. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
             return;
         }
         
@@ -124,7 +154,7 @@ public class NavigationController : MonoBehaviour
     {
         if (_virtualBoxTarget == null)
         {
-            Debug.Log($"Virtual box target not set, cannot limit the bounds of the controller. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
+            Debug.LogWarning($"Virtual box target not set, cannot limit the bounds of the controller. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
             return;
         }
         
@@ -156,7 +186,7 @@ public class NavigationController : MonoBehaviour
     private void Pan()
     {
         var clickPerformed = InputManager.Instance.input.Mouse.LeftButton.IsPressed();
-
+        
         if (!clickPerformed)
         {
             return;
@@ -164,8 +194,8 @@ public class NavigationController : MonoBehaviour
         
         var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();
         var speedCalculation = mouseDelta * _moveSpeed;
-        var movement = new Vector3(speedCalculation.x, speedCalculation.y, 0f);
-
+        var movement = new Vector3(speedCalculation.x, speedCalculation.y, 0f) * Time.deltaTime;
+        
         _pivotPoint.position += movement;
     }
 
