@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlanetModelButton : MonoBehaviour
 {
     [SerializeField] private PlanetManager _planetManager;
+
+    [SerializeField] private int _sceneIndex;
     public void OnPlanetClicked()
     {
         //Testing checking if function works
@@ -24,5 +26,10 @@ public class PlanetModelButton : MonoBehaviour
         Debug.Log($"{gameObject.name} is niet meer gehoverd.");
 
         // hide planet hover shader
+    }
+
+    public int GetSceneIndex()
+    {
+        return _sceneIndex;
     }
 }

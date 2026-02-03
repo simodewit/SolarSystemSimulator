@@ -19,7 +19,6 @@ public class InputManager : Singleton<InputManager>
     {
         input.Enable();
         input.Mouse.LeftButton.performed += OnClick;
-        //input.Mouse.Position
     }
 
     private void OnDisable()
@@ -41,17 +40,17 @@ public class InputManager : Singleton<InputManager>
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             // Check if hit object has PlanetModelButton
-            PlanetModelButton hoverButton = hit.collider.GetComponent<PlanetModelButton>();
+            PlanetModelButton planetHit = hit.collider.GetComponent<PlanetModelButton>();
 
-            if (hoverButton != null)
+            if (planetHit != null)
             {
-                if (_currentHover != hoverButton)
+                if (_currentHover != planetHit)
                 {
                     // Hover exited old
                     _currentHover?.OnPlanetUnHover();
 
                     // Hover entered new
-                    _currentHover = hoverButton;
+                    _currentHover = planetHit;
                     _currentHover.OnPlanetHover();
                 }
                 return;
