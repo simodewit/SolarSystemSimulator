@@ -10,11 +10,7 @@ public class NavigationController : MonoBehaviour
     
     [Header("Spawning")]
     [Tooltip("The distance of the camera to the pivot point at startup.")]
-    [SerializeField] private float _cameraDistance = -5f;
-    [Tooltip("The position of the pivot point at startup.")]
-    [SerializeField] private Vector3 _pivotPointPosition = new(0f,0f,0f);
-    [Tooltip("The rotation of the pivot point at startup.")]
-    [SerializeField] private Vector3 _pivotPointRotation = new(0.5f,0.5f,0.5f);
+    [SerializeField] private float _cameraDistance = 30f;
     
     [Header("Moving")]
     [Tooltip("This value can be null and will be defaulted to the transform this script is attached to. This is the point the camera will rotate around that will be moved around.")]
@@ -24,15 +20,21 @@ public class NavigationController : MonoBehaviour
     [Tooltip("The speed at which the controller moves.")]
     [SerializeField] private float _moveSpeed = 5f;
     [Tooltip("The speed at which the controller rotates.")]
-    [SerializeField] private float _rotateSpeed = 5f;
+    [SerializeField] private float _rotateSpeed = 20f;
+    
+    [Header("Scrolling")]
     [Tooltip("The speed at which the controller scrolls.")]
-    [SerializeField] private float _scrollSpeed = 5f;
+    [SerializeField] private float _scrollSpeed = 1f;
+    [Tooltip("The speed at which the controller scrolls.")]
+    [SerializeField] private float _minimumScrollDistance = 10f;
+    [Tooltip("The speed at which the controller scrolls.")]
+    [SerializeField] private float _maximumScrollDistance = 100f;
     
     [Header("Virtual box")]
     [Tooltip("The target place where the virtual box for out of bounds regulation will be created.")]
     [SerializeField] private Transform _virtualBoxTarget;
     [Tooltip("The size of the virtual box.")]
-    [SerializeField] private Vector3 _virtualBoxSize = new(30f,10f,30f);
+    [SerializeField] private Vector3 _virtualBoxSize = new(100f,50f,100f);
 
     [HideInInspector] public Action isPanning;
     
@@ -51,7 +53,6 @@ public class NavigationController : MonoBehaviour
         GetObjectReferences();
         CreateVirtualBox();
         SetCameraOffset();
-        SetPivotPointOffset();
     }
 
     /// <summary>
@@ -108,22 +109,7 @@ public class NavigationController : MonoBehaviour
             return;
         }
         
-        _camera.localPosition = new Vector3(0,0,_cameraDistance);
-    }
-
-    /// <summary>
-    /// Set the position and rotation offset of the pivot point when spawning.
-    /// </summary>
-    private void SetPivotPointOffset()
-    {
-        if (_pivotPoint == null)
-        {
-            Debug.LogWarning($"Pivot point not set, cannot set it's position and rotation. \n GameObject: {gameObject.name} \n Script: NavigationController.cs");
-            return;
-        }
-        
-        _pivotPoint.position = _pivotPointPosition;
-        _pivotPoint.eulerAngles = _pivotPointRotation;
+        _camera.localPosition = new Vector3(0,0,-_cameraDistance);
     }
 
     #endregion
@@ -198,7 +184,7 @@ public class NavigationController : MonoBehaviour
         var speedCalculation = -mouseDelta * _moveSpeed;
         var movement = new Vector3(speedCalculation.x, speedCalculation.y, 0f) * Time.deltaTime;
         
-        _pivotPoint.position += movement;
+        _pivotPoint.Translate(movement);
     }
 
     /// <summary>
@@ -215,7 +201,7 @@ public class NavigationController : MonoBehaviour
         
         var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();
         var speedCalculation = mouseDelta * _rotateSpeed;
-        var movement = new Vector3(speedCalculation.y, -speedCalculation.x, 0f) * Time.deltaTime;
+        var movement = new Vector3(-speedCalculation.y, speedCalculation.x, 0f) * Time.deltaTime;
         
         _pivotPoint.eulerAngles += movement;
     }
@@ -225,7 +211,13 @@ public class NavigationController : MonoBehaviour
     /// </summary>
     private void Zoom()
     {
-        var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();
+        var mouseDelta = InputManager.Instance.input.Mouse.Scroll.ReadValue<Vector2>();
+
+        var scrollAmount = mouseDelta.y * _scrollSpeed;
+        var newPosition = _camera.localPosition.z + scrollAmount;
+        newPosition = Mathf.Clamp(newPosition, -_maximumScrollDistance, -_minimumScrollDistance);
+        
+        _camera.localPosition = new Vector3(_camera.localPosition.x,_camera.localPosition.y,newPosition);
     }
     
     #endregion

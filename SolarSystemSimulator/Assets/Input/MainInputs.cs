@@ -132,7 +132,7 @@ public partial class @MainInputs: IInputActionCollection2, IDisposable
                     ""name"": ""Scroll"",
                     ""type"": ""Value"",
                     ""id"": ""bb799366-d2cd-444a-93b5-5c0e027556ba"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -186,7 +186,7 @@ public partial class @MainInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1447d43b-3993-4eee-8c33-906601dbfa4b"",
-                    ""path"": ""<Mouse>/middleButton"",
+                    ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
