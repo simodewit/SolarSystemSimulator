@@ -334,6 +334,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124581369}
   m_CullTransparentMesh: 1
+--- !u!1001 &354848967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 845687967}
+    m_Modifications:
+    - target: {fileID: 1134140387478478678, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122526839147025226, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+      propertyPath: m_Name
+      value: Zon (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
 --- !u!1 &414374151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1598,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127500538}
   m_CullTransparentMesh: 1
+--- !u!4 &1161444322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3638337843437177328, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+  m_PrefabInstance: {fileID: 354848967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1310444386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2608,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634965769}
   m_CullTransparentMesh: 1
+--- !u!23 &1681600267 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9015359426828435908, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+  m_PrefabInstance: {fileID: 354848967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1712650012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,17 +3219,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -287
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 62.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3212,13 +3291,21 @@ PrefabInstance:
       propertyPath: _planetManager
       value: 
       objectReference: {fileID: 2048203772}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetRenderer
+      value: 
+      objectReference: {fileID: 1681600267}
     - target: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_Name
       value: Zon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1161444322}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
 --- !u!1 &1909970191
@@ -3554,7 +3641,7 @@ MonoBehaviour:
   _navigationController: {fileID: 414374152}
   _galaxyPanel: {fileID: 1868982350}
   _planetPanel: {fileID: 950319972}
-  _alphaLerpDuration: 0.5
+  _alphaLerpDuration: 1
   _cameraLerpDuration: 1.5
   _cameraOffset: 0
   _distanceCamToPlanetFactor: 4
