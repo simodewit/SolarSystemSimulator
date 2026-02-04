@@ -20,14 +20,14 @@ public class NavigationController : MonoBehaviour
     [Tooltip("The speed at which the controller moves.")]
     [SerializeField] private float _moveSpeed = 5f;
     [Tooltip("The speed at which the controller rotates.")]
-    [SerializeField] private float _rotateSpeed = 20f;
+    [SerializeField] private float _rotateSpeed = 30f;
     
     [Header("Scrolling")]
     [Tooltip("The speed at which the controller scrolls.")]
     [SerializeField] private float _scrollSpeed = 1f;
-    [Tooltip("The speed at which the controller scrolls.")]
-    [SerializeField] private float _minimumScrollDistance = 10f;
-    [Tooltip("The speed at which the controller scrolls.")]
+    [Tooltip("The minimum amount of space that the controller will keep between the pivot point and the camera.")]
+    [SerializeField] private float _minimumScrollDistance = 1f;
+    [Tooltip("The maximum amount of space that the controller will keep between the pivot point and the camera.")]
     [SerializeField] private float _maximumScrollDistance = 100f;
     
     [Header("Virtual box")]
@@ -36,7 +36,10 @@ public class NavigationController : MonoBehaviour
     [Tooltip("The size of the virtual box.")]
     [SerializeField] private Vector3 _virtualBoxSize = new(100f,50f,100f);
 
+    [Tooltip("This action gets called every moment the controller uses the Pan() method.")]
     [HideInInspector] public Action isPanning;
+    [Tooltip("You can add an planet size to this variable to ensure the controller can't scroll into the planet when examining.")]
+    [HideInInspector] public float currentPlanetSize;
     
     private Bounds _virtualBox;
     private bool _enableMovement = true;
@@ -56,7 +59,7 @@ public class NavigationController : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates every frame.
+    /// Gets called every frame.
     /// </summary>
     private void Update()
     {
@@ -212,10 +215,11 @@ public class NavigationController : MonoBehaviour
     private void Zoom()
     {
         var mouseDelta = InputManager.Instance.input.Mouse.Scroll.ReadValue<Vector2>();
-
+        var correctedScrollDistance = Mathf.Max(currentPlanetSize, _minimumScrollDistance);
+        
         var scrollAmount = mouseDelta.y * _scrollSpeed;
         var newPosition = _camera.localPosition.z + scrollAmount;
-        newPosition = Mathf.Clamp(newPosition, -_maximumScrollDistance, -_minimumScrollDistance);
+        newPosition = Mathf.Clamp(newPosition, -_maximumScrollDistance, -correctedScrollDistance);
         
         _camera.localPosition = new Vector3(_camera.localPosition.x,_camera.localPosition.y,newPosition);
     }
