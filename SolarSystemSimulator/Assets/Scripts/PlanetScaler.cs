@@ -83,6 +83,7 @@ public class PlanetScaler : MonoBehaviour
         foreach (var planet in _planets)
         {
             StartCoroutine(ScaleToRealistic(planet));
+            StartCoroutine(PositionToRealistic(planet));
         }
     }
 
@@ -121,6 +122,30 @@ public class PlanetScaler : MonoBehaviour
         
         InputManager.Instance.ToggleClick(true);
     }
+
+    /// <summary>
+    /// This method will start the planet positioning to get the position to a realistic position relative to the other planets.
+    /// </summary>
+    /// <param name="planet"> The planet to position. </param>
+    /// <returns></returns>
+    private IEnumerator PositionToRealistic(PlanetScaleData planet)
+    {
+        var position = planet.transform.position;
+        var newPosition = planet.ConvertedPosition;
+        
+        var duration = _lerpTime;
+        var elapsed = 0f;
+        
+        while (elapsed < duration)
+        {
+            var time = elapsed / duration;
+            
+            planet.transform.position = Vector3.Lerp(position, newPosition, time);
+            
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+    }
     
     #endregion
 
@@ -134,6 +159,7 @@ public class PlanetScaler : MonoBehaviour
         foreach (var planet in _planets)
         {
             StartCoroutine(ScaleToPleasant(planet));
+            StartCoroutine(PositionToPleasant(planet));
         }
     }
     
@@ -171,6 +197,30 @@ public class PlanetScaler : MonoBehaviour
         planet.transform.localScale = newScale;
         
         InputManager.Instance.ToggleClick(true);
+    }
+
+    /// <summary>
+    /// This method will start the planet positioning to get the scale to a pleasant position to look at.
+    /// </summary>
+    /// <param name="planet"> The planet to position. </param>
+    /// <returns></returns>
+    private IEnumerator PositionToPleasant(PlanetScaleData planet)
+    {
+        var position = planet.transform.position;
+        var newPosition = planet.PleasantPosition;
+        
+        var duration = _lerpTime;
+        var elapsed = 0f;
+        
+        while (elapsed < duration)
+        {
+            var time = elapsed / duration;
+            
+            planet.transform.position = Vector3.Lerp(position, newPosition, time);
+            
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
     }
     
     #endregion

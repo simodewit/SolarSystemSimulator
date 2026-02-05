@@ -13,10 +13,17 @@ public class PlanetScaleData : MonoBehaviour
     [Tooltip("The renderer of the model.")]
     public Renderer modelRenderer;
     
+    [Header("Positioning")]
+    [Tooltip("The size of the planet bounds when in pleasant mode.")]
+    [SerializeField] private Vector3 _planetRealisticPosition = new(0,0,150000000);
+    [Tooltip("The size of the planet bounds when in pleasant mode.")]
+    [SerializeField] private Vector3 _planetPleasantPosition = new(0,0,15);
+    
+    [Header("Scaling")]
     [Tooltip("The real world diameter of the planet in kilometers.")]
     [SerializeField] private float _diameter = 12765f;
     [Tooltip("The size of the planet bounds when in pleasant mode.")]
-    [SerializeField] private float planetPleasantBounds = 20f;
+    [SerializeField] private float _planetPleasantBounds = 5f;
 
     private const float _divider = 100000f;
 
@@ -72,7 +79,17 @@ public class PlanetScaleData : MonoBehaviour
     /// <summary>
     /// Returns the scale the model should be when in the pleasant mode.
     /// </summary>
-    public float PleasantBounds => planetPleasantBounds;
+    public float PleasantBounds => _planetPleasantBounds;
+
+    /// <summary>
+    /// Returns the real size of the planet corrected to a usable value.
+    /// </summary>
+    public Vector3 ConvertedPosition => _planetRealisticPosition / _divider;
+
+    /// <summary>
+    /// Returns the scale the model should be when in the pleasant mode.
+    /// </summary>
+    public Vector3 PleasantPosition => _planetPleasantPosition;
     
     #endregion
 }
