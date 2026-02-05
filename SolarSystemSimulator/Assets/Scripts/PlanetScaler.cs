@@ -22,7 +22,7 @@ public class PlanetScaler : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        _button.onClick.AddListener(Scale);
+        _button.onClick.AddListener(SwitchScale);
         SetScale();
     }
 
@@ -31,6 +31,12 @@ public class PlanetScaler : MonoBehaviour
     /// </summary>
     private void SetScale()
     {
+        if (_planets.Length == 0)
+        {
+            Debug.LogWarning($"There are no planets referenced. \n GameObject: {gameObject.name} \n Script: PlanetScaleData.cs");
+            return;
+        }
+        
         foreach (var planet in _planets)
         {
             var newScale = new Vector3(planet.PleasantScale, planet.PleasantScale, planet.PleasantScale);
@@ -41,7 +47,7 @@ public class PlanetScaler : MonoBehaviour
     /// <summary>
     /// Switches between the realistic scale and the pleasant scale.
     /// </summary>
-    private void Scale()
+    private void SwitchScale()
     {
         if (_isRealScale)
         {
@@ -51,6 +57,8 @@ public class PlanetScaler : MonoBehaviour
         {
             ScaleToRealistic();
         }
+        
+        _isRealScale = !_isRealScale;
     }
 
     /// <summary>
@@ -71,7 +79,7 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator ScaleToRealistic(PlanetScaleData planet)
     {
-        var renderer = planet.GetComponent<Renderer>();
+        var renderer = planet.modelRenderer;
         
         var boundSize = renderer.bounds.size;
         var desiredBoundSize = planet.ConvertedBounds;

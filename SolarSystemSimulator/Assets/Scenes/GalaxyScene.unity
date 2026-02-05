@@ -206,8 +206,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972607093}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088383671}
   m_SourcePrefab: {fileID: 100100000, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+--- !u!1 &7810374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+  m_PrefabInstance: {fileID: 7810373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &30473365
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +427,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+--- !u!23 &354848968 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7087483906773863265, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
+  m_PrefabInstance: {fileID: 354848967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &423055816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,8 +3557,32 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1161444322}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897897329}
   m_SourcePrefab: {fileID: 100100000, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+--- !u!1 &1897897328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4824618684030105197, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+  m_PrefabInstance: {fileID: 1897897327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897897329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897897328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b81aeab703297b4c9c169325a8084de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetScaleData
+  scaleTransform: {fileID: 845687967}
+  modelRenderer: {fileID: 354848968}
+  _diameter: 1392700
+  _planetPleasantScale: 1
 --- !u!1 &1909970191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048203773}
   - component: {fileID: 2048203772}
+  - component: {fileID: 2048203774}
   m_Layer: 0
   m_Name: PlanetManager
   m_TagString: Untagged
@@ -3876,7 +3914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetManager
   _camHolder: {fileID: 1362342958}
-  _navigationController: {fileID: 0}
+  _navigationController: {fileID: 1362342959}
   _galaxyCanvasGroup: {fileID: 1868982350}
   _planetCanvasGroup: {fileID: 950319972}
   _alphaLerpDuration: 1
@@ -3898,11 +3936,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048203774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048203771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ec4849f82947e40999722a211d140d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetScaler
+  _button: {fileID: 1547701483}
+  _lerpTime: 2
+  _planets:
+  - {fileID: 1897897329}
+  - {fileID: 2088383671}
 --- !u!4 &2088383670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
   m_PrefabInstance: {fileID: 7810373}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2088383671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b81aeab703297b4c9c169325a8084de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetScaleData
+  scaleTransform: {fileID: 2088383670}
+  modelRenderer: {fileID: 972607092}
+  _diameter: 12765
+  _planetPleasantScale: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
