@@ -49,7 +49,7 @@ public class PlanetScaler : MonoBehaviour
         
         foreach (var planet in _planets)
         {
-            var newScale = new Vector3(planet.PleasantScale, planet.PleasantScale, planet.PleasantScale);
+            var newScale = new Vector3(planet.PleasantBounds, planet.PleasantBounds, planet.PleasantBounds);
             planet.transform.localScale = newScale;
         }
     }
@@ -146,10 +146,15 @@ public class PlanetScaler : MonoBehaviour
     {
         InputManager.Instance.ToggleClick(false);
         
+        var modelRenderer = planet.modelRenderer;
+        
+        var boundSize = modelRenderer.bounds.size;
+        var desiredBoundSize = planet.PleasantBounds;
         var scale = planet.transform.localScale;
-        var pleasantScale = planet.PleasantScale;
-        var newScale = new Vector3(pleasantScale, pleasantScale, pleasantScale);
 
+        var scaleMultiplier = desiredBoundSize / boundSize.y;
+        var newScale = scale * scaleMultiplier;
+        
         var duration = _lerpTime;
         var elapsed = 0f;
 

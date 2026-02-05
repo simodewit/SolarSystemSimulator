@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// Data for the planet on how big it should be in different modes.
@@ -15,7 +16,7 @@ public class PlanetScaleData : MonoBehaviour
     [Tooltip("The real world diameter of the planet in kilometers.")]
     [SerializeField] private float _diameter = 12765f;
     [Tooltip("The size of the planet bounds when in pleasant mode.")]
-    [SerializeField] private float _planetPleasantScale = 1f;
+    [SerializeField] private float planetPleasantBounds = 20f;
 
     private const float _divider = 100000f;
 
@@ -71,7 +72,7 @@ public class PlanetScaleData : MonoBehaviour
     /// <summary>
     /// Returns the scale the model should be when in the pleasant mode.
     /// </summary>
-    public float PleasantScale => _planetPleasantScale;
+    public float PleasantBounds => planetPleasantBounds;
     
     #endregion
 }
