@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlanetModelButton : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class PlanetModelButton : MonoBehaviour
 
     
     [SerializeField] private Renderer _planetRenderer;
+    [SerializeField] private Renderer _hologramRenderer;
+
+    private float _hoverLerpDuration;
+
+    private void Start()
+    {
+        _hoverLerpDuration = _planetManager.GetHoverLerpDuration();
+    }
     public void OnPlanetClicked()
     {
         //Testing checking if function works
@@ -20,7 +29,8 @@ public class PlanetModelButton : MonoBehaviour
     {
         // Testing checking if function works
         Debug.Log($"{gameObject.name} is gehoverd.");
-
+        StopAllCoroutines();
+        StartCoroutine(HologramLerper(0, 1));
         // show planet hover shader
     }
 
@@ -28,7 +38,8 @@ public class PlanetModelButton : MonoBehaviour
     {
         // Testing checking if function works
         Debug.Log($"{gameObject.name} is niet meer gehoverd.");
-
+        StopAllCoroutines();
+        StartCoroutine(HologramLerper(1, 0));
         // hide planet hover shader
     }
 
@@ -48,4 +59,22 @@ public class PlanetModelButton : MonoBehaviour
         return maxBounds.y;
     }
 
+    private IEnumerator HologramLerper(float start, float end)
+    {
+        float elapsed = 0f;
+        
+        while (elapsed < _hoverLerpDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Lerp(0, 1, elapsed / _hoverLerpDuration);
+            float formingProgress = Mathf.Lerp(start, end, t);
+            _hologramRenderer.material.SetFloat("_FormingProgress", formingProgress);
+
+            yield return null;
+        }
+
+        // when lerp is finished
+        // Ensure exact position at the end
+        _hologramRenderer.material.SetFloat("_FormingProgress", end);
+    }
 }

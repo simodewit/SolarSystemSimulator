@@ -18,6 +18,8 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private float _cameraLerpDuration;
     [SerializeField] private float _cameraOffset;
     [SerializeField] private float _distanceCamToPlanetFactor;
+
+    [SerializeField] private float _hoverEffectLerpDuration;
     private void Start()
     {
         InputManager.Instance.SpawnInstance();
@@ -31,6 +33,10 @@ public class PlanetManager : MonoBehaviour
             LetPlanetGo();
         }
         _currentPlanet = planetToLockOn;
+
+        // Turn planet hover efffect off
+        _currentPlanet.OnPlanetUnHover();
+        InputManager.Instance.ToggleHover(false);
 
         //first stop cameralerpcoroutine
         if (_cameraLerpCoroutine != null)
@@ -54,6 +60,7 @@ public class PlanetManager : MonoBehaviour
             StartCoroutine(LerpAlphaPanel(1,0, _planetCanvasGroup));
             StartCoroutine(LerpAlphaPanel(1, 0, _currentPlanet.GetPlanetInfoPanel()));
             _currentPlanet = null;
+            InputManager.Instance.ToggleHover(true);
         }
     }
 
@@ -75,6 +82,11 @@ public class PlanetManager : MonoBehaviour
     {
         Debug.Log(_currentPlanet.GetPlanetBounds());
         return _distanceCamToPlanetFactor * _currentPlanet.GetPlanetBounds();
+    }
+
+    public float GetHoverLerpDuration()
+    {
+        return _hoverEffectLerpDuration;
     }
     private IEnumerator LerpCameraToTarget(Vector3 cameraHolderStartPos, Vector3 cameraHolderTargetPos, float cameraStartZPos, float cameraTargetZPos)
     {

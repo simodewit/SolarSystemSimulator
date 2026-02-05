@@ -12,6 +12,9 @@ public class InputManager : Singleton<InputManager>
     private Camera _camera;
     private PlanetModelButton _currentHover;
 
+    private bool _canClick;
+    private bool _canHover;
+
     #region Unity callbacks
 
     /// <summary>
@@ -23,6 +26,8 @@ public class InputManager : Singleton<InputManager>
 
         input = new MainInputs();
         _camera = Camera.main;
+        _canHover = true;
+        _canClick = true;
     }
 
     /// <summary>
@@ -60,6 +65,8 @@ public class InputManager : Singleton<InputManager>
     /// </summary>
     private void HandleHover()
     {
+        if (!_canHover) return;
+
         // Ray from camera to mouse
         Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
@@ -98,6 +105,8 @@ public class InputManager : Singleton<InputManager>
     {
         if (!ctx.performed) return;
 
+        if (!_canClick) return;
+        
         Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -107,6 +116,20 @@ public class InputManager : Singleton<InputManager>
             {
                 planetHit.OnPlanetClicked();
             }
+        }
+    }
+
+    public void ToggleClick(bool value)
+    {
+        _canClick = value;
+    }
+
+    public void ToggleHover(bool value)
+    {
+        _canHover = value;
+        if (_currentHover != null)
+        {
+            _currentHover = null;
         }
     }
     

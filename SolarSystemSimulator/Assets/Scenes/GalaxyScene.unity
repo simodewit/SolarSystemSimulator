@@ -3921,6 +3921,7 @@ MonoBehaviour:
   _cameraLerpDuration: 1.5
   _cameraOffset: 0
   _distanceCamToPlanetFactor: 4
+  _hoverEffectLerpDuration: 0.5
 --- !u!4 &2048203773
 Transform:
   m_ObjectHideFlags: 0

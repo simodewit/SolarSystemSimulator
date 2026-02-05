@@ -844,6 +844,7 @@ MonoBehaviour:
   _sceneIndex: 0
   _canvasGroup: {fileID: 7707119566860308666}
   _planetRenderer: {fileID: 7646597402915558049}
+  _hologramRenderer: {fileID: 6048273772246417091}
 --- !u!135 &7475950515803174523
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -863,7 +864,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5076770886868478922
 GameObject:
@@ -1798,6 +1799,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bdfc8bf96e769543a4003c94b206511, type: 3}
+--- !u!23 &6048273772246417091 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1628268030226228447, guid: 8bdfc8bf96e769543a4003c94b206511, type: 3}
+  m_PrefabInstance: {fileID: 5005484727508752924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8211844447413678542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3783402823636904914, guid: 8bdfc8bf96e769543a4003c94b206511, type: 3}
