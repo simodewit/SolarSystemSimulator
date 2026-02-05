@@ -93,6 +93,8 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator ScaleToRealistic(PlanetScaleData planet)
     {
+        InputManager.Instance.ToggleClick(false);
+        
         var modelRenderer = planet.modelRenderer;
         
         var boundSize = modelRenderer.bounds.size;
@@ -116,6 +118,8 @@ public class PlanetScaler : MonoBehaviour
         }
         
         planet.transform.localScale = newScale;
+        
+        InputManager.Instance.ToggleClick(true);
     }
     
     #endregion
@@ -140,6 +144,8 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator ScaleToPleasant(PlanetScaleData planet)
     {
+        InputManager.Instance.ToggleClick(false);
+        
         var scale = planet.transform.localScale;
         var pleasantScale = planet.PleasantScale;
         var newScale = new Vector3(pleasantScale, pleasantScale, pleasantScale);
@@ -158,6 +164,8 @@ public class PlanetScaler : MonoBehaviour
         }
         
         planet.transform.localScale = newScale;
+        
+        InputManager.Instance.ToggleClick(true);
     }
     
     #endregion

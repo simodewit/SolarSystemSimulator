@@ -40,6 +40,8 @@ public class NavigationController : MonoBehaviour
     [HideInInspector] public Action isPanning;
     [Tooltip("You can add an planet size to this variable to ensure the controller can't scroll into the planet when examining.")]
     [HideInInspector] public float currentPlanetSize;
+    [Tooltip("The instance of the class for other scripts to reference from.")]
+    [HideInInspector] public static NavigationController Instance;
     
     private Bounds _virtualBox;
     private bool _enableMovement = true;
@@ -47,6 +49,14 @@ public class NavigationController : MonoBehaviour
     #endregion
     
     #region Unity Callbacks
+
+    /// <summary>
+    /// Gets called before the first rendered frame.
+    /// </summary>
+    private void Awake()
+    {
+        Instance = this;
+    }
     
     /// <summary>
     /// Calls at startup.
