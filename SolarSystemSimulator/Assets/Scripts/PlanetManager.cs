@@ -11,7 +11,7 @@ public class PlanetManager : MonoBehaviour
 
     [SerializeField] private NavigationController _navigationController;
 
-    [SerializeField] private CanvasGroup _galaxyPanel, _planetPanel;
+    [SerializeField] private CanvasGroup _galaxyCanvasGroup, _planetCanvasGroup;
     [SerializeField] private float _alphaLerpDuration;
 
     [Header("Camera Settings")]
@@ -39,8 +39,8 @@ public class PlanetManager : MonoBehaviour
         _camHolder.SetParent(planetToLockOn.transform);
         _navigationController.ToggleMovement(false);
         _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position, _cam.transform.localPosition.z, GetCamZPosition()));
-        StartCoroutine(LerpAlphaPanel(1,0,_galaxyPanel));
-        StartCoroutine(LerpAlphaPanel(0,1,_planetPanel));
+        StartCoroutine(LerpAlphaPanel(1,0,_galaxyCanvasGroup));
+        StartCoroutine(LerpAlphaPanel(0,1,_planetCanvasGroup));
         StartCoroutine(LerpAlphaPanel(0,1,planetToLockOn.GetPlanetInfoPanel()));
     }
 
@@ -50,8 +50,8 @@ public class PlanetManager : MonoBehaviour
         {
             StopAllCoroutines();
             _camHolder.SetParent(null);
-            StartCoroutine(LerpAlphaPanel(0,1,_galaxyPanel));
-            StartCoroutine(LerpAlphaPanel(1,0, _planetPanel));
+            StartCoroutine(LerpAlphaPanel(0,1,_galaxyCanvasGroup));
+            StartCoroutine(LerpAlphaPanel(1,0, _planetCanvasGroup));
             StartCoroutine(LerpAlphaPanel(1, 0, _currentPlanet.GetPlanetInfoPanel()));
             _currentPlanet = null;
         }
@@ -104,11 +104,11 @@ public class PlanetManager : MonoBehaviour
         float elapsed = 0f;
         if (alphaEnd == 0)
         {
-            groupToLerp.interactable = false;
+            groupToLerp.blocksRaycasts = false;
         }
         else
         {
-            groupToLerp.interactable = true;
+            groupToLerp.blocksRaycasts = true;
         }
             while (elapsed < _alphaLerpDuration)
             {

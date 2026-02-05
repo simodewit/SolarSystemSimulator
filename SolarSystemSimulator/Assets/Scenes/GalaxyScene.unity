@@ -419,61 +419,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b68a6d25af72d43942157c9a139f67, type: 3}
---- !u!1 &414374151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 414374153}
-  - component: {fileID: 414374152}
-  m_Layer: 0
-  m_Name: NavigationController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &414374152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414374151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4103bacfc2979cd40bedb8003a29f08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NavigationController
-  _cameraDistance: -20
-  _pivotPoint: {fileID: 1362342958}
-  _camera: {fileID: 1488729224}
-  _moveSpeed: 5
-  _rotateSpeed: 5
-  _scrollSpeed: 5
-  _minimumScrollDistance: 1
-  _maximumScrollDistance: 100
-  _virtualBoxTarget: {fileID: 845687967}
-  _virtualBoxSize: {x: 30, y: 10, z: 30}
-  currentPlanetSize: 0
---- !u!4 &414374153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414374151}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423055816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1357,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &950319973
 MonoBehaviour:
@@ -1862,6 +1807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362342958}
+  - component: {fileID: 1362342959}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -1885,6 +1831,29 @@ Transform:
   - {fileID: 1488729224}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1362342959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362342957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4103bacfc2979cd40bedb8003a29f08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavigationController
+  _cameraDistance: -20
+  _pivotPoint: {fileID: 1362342958}
+  _camera: {fileID: 1488729224}
+  _moveSpeed: 5
+  _rotateSpeed: 5
+  _scrollSpeed: 5
+  _minimumScrollDistance: 1
+  _maximumScrollDistance: 100
+  _virtualBoxTarget: {fileID: 845687967}
+  _virtualBoxSize: {x: 30, y: 10, z: 30}
+  currentPlanetSize: 0
 --- !u!1 &1372923509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,6 +3525,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zon
       objectReference: {fileID: 0}
+    - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
@@ -3895,9 +3876,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetManager
   _camHolder: {fileID: 1362342958}
-  _navigationController: {fileID: 414374152}
-  _galaxyPanel: {fileID: 1868982350}
-  _planetPanel: {fileID: 950319972}
+  _navigationController: {fileID: 0}
+  _galaxyCanvasGroup: {fileID: 1868982350}
+  _planetCanvasGroup: {fileID: 950319972}
   _alphaLerpDuration: 1
   _cameraLerpDuration: 1.5
   _cameraOffset: 0
@@ -3933,4 +3914,3 @@ SceneRoots:
   - {fileID: 1602493988}
   - {fileID: 671314644}
   - {fileID: 2048203773}
-  - {fileID: 414374153}
