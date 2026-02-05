@@ -130,7 +130,7 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator PositionToRealistic(PlanetScaleData planet)
     {
-        var position = planet.transform.position;
+        var position = planet.transform.localPosition;
         var newPosition = planet.ConvertedPosition;
         
         var duration = _lerpTime;
@@ -140,7 +140,7 @@ public class PlanetScaler : MonoBehaviour
         {
             var time = elapsed / duration;
             
-            planet.transform.position = Vector3.Lerp(position, newPosition, time);
+            planet.transform.localPosition = Vector3.Lerp(position, newPosition, time);
             
             elapsed += Time.deltaTime;
             yield return null;
@@ -206,7 +206,7 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator PositionToPleasant(PlanetScaleData planet)
     {
-        var position = planet.transform.position;
+        var position = planet.transform.localPosition;
         var newPosition = planet.PleasantPosition;
         
         var duration = _lerpTime;
@@ -216,7 +216,7 @@ public class PlanetScaler : MonoBehaviour
         {
             var time = elapsed / duration;
             
-            planet.transform.position = Vector3.Lerp(position, newPosition, time);
+            planet.transform.localPosition = Vector3.Lerp(position, newPosition, time);
             
             elapsed += Time.deltaTime;
             yield return null;
