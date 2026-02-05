@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlanetModelButton : MonoBehaviour
 {
-    [SerializeField] private PlanetManager _planetManager;
-
     [SerializeField] private int _sceneIndex;
     [SerializeField] private CanvasGroup _canvasGroup;
 
@@ -16,19 +14,15 @@ public class PlanetModelButton : MonoBehaviour
 
     private void Start()
     {
-        _hoverLerpDuration = _planetManager.GetHoverLerpDuration();
+        _hoverLerpDuration = PlanetManager.Instance.GetHoverLerpDuration();
     }
     public void OnPlanetClicked()
     {
-        //Testing checking if function works
-        Debug.Log($"{gameObject.name} is geselecteerd");
-        _planetManager.LockToPlanet(this);
+        PlanetManager.Instance.LockToPlanet(this);
     }
 
     public void OnPlanetHover()
     {
-        // Testing checking if function works
-        Debug.Log($"{gameObject.name} is gehoverd.");
         StopAllCoroutines();
         StartCoroutine(HologramLerper(-0.05f, 1));
         // show planet hover shader
@@ -36,8 +30,6 @@ public class PlanetModelButton : MonoBehaviour
 
     public void OnPlanetUnHover()
     {
-        // Testing checking if function works
-        Debug.Log($"{gameObject.name} is niet meer gehoverd.");
         StopAllCoroutines();
         StartCoroutine(HologramLerper(1, -0.05f));
         // hide planet hover shader

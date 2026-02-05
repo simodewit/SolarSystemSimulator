@@ -9,8 +9,6 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private Transform _camHolder;
     private Camera _cam;
 
-    [SerializeField] private NavigationController _navigationController;
-
     [SerializeField] private CanvasGroup _galaxyCanvasGroup, _planetCanvasGroup;
     [SerializeField] private float _alphaLerpDuration;
 
@@ -20,10 +18,18 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private float _distanceCamToPlanetFactor;
 
     [SerializeField] private float _hoverEffectLerpDuration;
+
+    [HideInInspector] public static PlanetManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    
     private void Start()
     {
         InputManager.Instance.SpawnInstance();
-        _navigationController.isPanning += LetPlanetGo;
+        NavigationController.Instance.isPanning += LetPlanetGo;
         _cam = Camera.main;
     }
     public void LockToPlanet(PlanetModelButton planetToLockOn)
@@ -45,7 +51,7 @@ public class PlanetManager : MonoBehaviour
         _camHolder.SetParent(planetToLockOn.transform);
 
         // Stop panning when lerping the camera
-        _navigationController.ToggleMovement(false);
+        NavigationController.Instance.ToggleMovement(false);
 
         // Camera lerper
         _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position, _cam.transform.localPosition.z, GetCamZPosition()));
@@ -92,7 +98,6 @@ public class PlanetManager : MonoBehaviour
 
     private float GetCamZPosition()
     {
-        Debug.Log(_currentPlanet.GetPlanetBounds());
         return _distanceCamToPlanetFactor * _currentPlanet.GetPlanetBounds();
     }
 
@@ -125,7 +130,7 @@ public class PlanetManager : MonoBehaviour
         _camHolder.transform.position = cameraHolderTargetPos;
         
         // Panning is available when lerp ends
-        _navigationController.ToggleMovement(true);
+        NavigationController.Instance.ToggleMovement(true);
     }
 
     private IEnumerator LerpAlphaPanel(float alphaStart, float alphaEnd, CanvasGroup groupToLerp)

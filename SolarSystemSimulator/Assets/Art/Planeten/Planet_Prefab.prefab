@@ -803,6 +803,7 @@ GameObject:
   - component: {fileID: 3085616680610115827}
   - component: {fileID: 4796305391350782600}
   - component: {fileID: 7475950515803174523}
+  - component: {fileID: 6092613729246381854}
   m_Layer: 0
   m_Name: Planet_Prefab
   m_TagString: Untagged
@@ -840,7 +841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed37eb7bbf00aef44885d2561df0ab46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetModelButton
-  _planetManager: {fileID: 0}
   _sceneIndex: 0
   _canvasGroup: {fileID: 7707119566860308666}
   _planetRenderer: {fileID: 7646597402915558049}
@@ -866,6 +866,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6092613729246381854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824618684030105197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b81aeab703297b4c9c169325a8084de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetScaleData
+  scaleTransform: {fileID: 3085616680610115827}
+  modelRenderer: {fileID: 0}
+  _diameter: 12765
+  _planetPleasantScale: 1
 --- !u!1 &5076770886868478922
 GameObject:
   m_ObjectHideFlags: 0
