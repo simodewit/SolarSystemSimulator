@@ -43,8 +43,14 @@ public class PlanetManager : MonoBehaviour
             StopCoroutine(_cameraLerpCoroutine);
 
         _camHolder.SetParent(planetToLockOn.transform);
+
+        // Stop panning when lerping the camera
         _navigationController.ToggleMovement(false);
+
+        // Camera lerper
         _cameraLerpCoroutine = StartCoroutine(LerpCameraToTarget(_camHolder.transform.position, planetToLockOn.transform.position, _cam.transform.localPosition.z, GetCamZPosition()));
+
+        // Panel lerpers
         StartCoroutine(LerpAlphaPanel(1,0,_galaxyCanvasGroup));
         StartCoroutine(LerpAlphaPanel(0,1,_planetCanvasGroup));
         StartCoroutine(LerpAlphaPanel(0,1,planetToLockOn.GetPlanetInfoPanel()));
@@ -55,11 +61,17 @@ public class PlanetManager : MonoBehaviour
         if (_currentPlanet != null)
         {
             StopAllCoroutines();
+
             _camHolder.SetParent(null);
+
+            // Panel lepers
             StartCoroutine(LerpAlphaPanel(0,1,_galaxyCanvasGroup));
             StartCoroutine(LerpAlphaPanel(1,0, _planetCanvasGroup));
             StartCoroutine(LerpAlphaPanel(1, 0, _currentPlanet.GetPlanetInfoPanel()));
+
             _currentPlanet = null;
+
+            // Hover effect is triggerable
             InputManager.Instance.ToggleHover(true);
         }
     }
@@ -93,10 +105,14 @@ public class PlanetManager : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < _cameraLerpDuration)
         {
+            // Time calculations
             elapsed += Time.deltaTime;
             float t = Mathf.Lerp(0,1, elapsed / _cameraLerpDuration);
+
+            // camholder lerp
             _camHolder.position = Vector3.Lerp(cameraHolderStartPos, cameraHolderTargetPos, t);
 
+            // cam lerp (zoom)
             Vector3 localPos = _cam.transform.localPosition;
             localPos.z = Mathf.Lerp(cameraStartZPos, -cameraTargetZPos, t);
             _cam.transform.localPosition = localPos;
@@ -108,6 +124,7 @@ public class PlanetManager : MonoBehaviour
         // Ensure exact position at the end
         _camHolder.transform.position = cameraHolderTargetPos;
         
+        // Panning is available when lerp ends
         _navigationController.ToggleMovement(true);
     }
 
@@ -124,8 +141,10 @@ public class PlanetManager : MonoBehaviour
         }
             while (elapsed < _alphaLerpDuration)
             {
+                // Time calculations
                 elapsed += Time.deltaTime;
                 float t = Mathf.Lerp(0, 1, elapsed / _cameraLerpDuration);
+
                 groupToLerp.alpha = Mathf.Lerp(alphaStart, alphaEnd, t);
 
                 yield return null;

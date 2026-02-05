@@ -119,6 +119,7 @@ public class InputManager : Singleton<InputManager>
         }
     }
 
+    // while scaling the planets you can't select one
     public void ToggleClick(bool value)
     {
         _canClick = value;
@@ -127,6 +128,8 @@ public class InputManager : Singleton<InputManager>
     public void ToggleHover(bool value)
     {
         _canHover = value;
+
+        // if there is a current hover reset it so that the unhover effect doesnt trigger when deselecting
         if (_currentHover != null)
         {
             _currentHover = null;

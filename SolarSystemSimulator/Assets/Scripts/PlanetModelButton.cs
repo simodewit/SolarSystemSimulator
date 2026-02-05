@@ -30,7 +30,7 @@ public class PlanetModelButton : MonoBehaviour
         // Testing checking if function works
         Debug.Log($"{gameObject.name} is gehoverd.");
         StopAllCoroutines();
-        StartCoroutine(HologramLerper(0, 1));
+        StartCoroutine(HologramLerper(-0.05f, 1));
         // show planet hover shader
     }
 
@@ -39,7 +39,7 @@ public class PlanetModelButton : MonoBehaviour
         // Testing checking if function works
         Debug.Log($"{gameObject.name} is niet meer gehoverd.");
         StopAllCoroutines();
-        StartCoroutine(HologramLerper(1, 0));
+        StartCoroutine(HologramLerper(1, -0.05f));
         // hide planet hover shader
     }
 
@@ -65,8 +65,11 @@ public class PlanetModelButton : MonoBehaviour
         
         while (elapsed < _hoverLerpDuration)
         {
+            // Time calculations
             elapsed += Time.deltaTime;
             float t = Mathf.Lerp(0, 1, elapsed / _hoverLerpDuration);
+
+            // Setting the hologram float
             float formingProgress = Mathf.Lerp(start, end, t);
             _hologramRenderer.material.SetFloat("_FormingProgress", formingProgress);
 
