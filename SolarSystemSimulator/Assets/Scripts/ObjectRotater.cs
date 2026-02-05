@@ -12,9 +12,9 @@ public class ObjectRotater : MonoBehaviour
 
     [Header("Axis")]
     [Tooltip("The speed at which the target will be rotated.")]
-    [SerializeField] private float _xSpeed = 5f;
+    [SerializeField] private float _xSpeed = 0;
     [Tooltip("If turned on this script will rotate around the Y axis.")]
-    [SerializeField] private float _ySpeed = 5;
+    [SerializeField] private float _ySpeed = 5f;
     [Tooltip("If turned on this script will rotate around the Z axis.")]
     [SerializeField] private float _zSpeed = 0;
     
