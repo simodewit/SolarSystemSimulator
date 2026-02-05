@@ -7,6 +7,8 @@ using UnityEngine.UI;
 /// </summary>
 public class PlanetScaler : MonoBehaviour
 {
+    #region variables
+    
     [Tooltip("The button that will trigger scaling the planets.")]
     [SerializeField] private Button _button;
     [Tooltip("The time the lerp should take.")]
@@ -17,6 +19,10 @@ public class PlanetScaler : MonoBehaviour
     
     private bool _isRealScale = false;
     
+    #endregion
+    
+    #region unity callbacks
+    
     /// <summary>
     /// Calls at startup.
     /// </summary>
@@ -25,6 +31,10 @@ public class PlanetScaler : MonoBehaviour
         _button.onClick.AddListener(SwitchScale);
         SetScale();
     }
+    
+    #endregion
+    
+    #region Rotation
 
     /// <summary>
     /// This method will set the scale for the planets directly.
@@ -61,6 +71,10 @@ public class PlanetScaler : MonoBehaviour
         _isRealScale = !_isRealScale;
     }
 
+    #endregion
+    
+    #region To realistic
+    
     /// <summary>
     /// This will start the coroutine for every planet at the same time to scale at the same moment.
     /// </summary>
@@ -79,9 +93,9 @@ public class PlanetScaler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator ScaleToRealistic(PlanetScaleData planet)
     {
-        var renderer = planet.modelRenderer;
+        var modelRenderer = planet.modelRenderer;
         
-        var boundSize = renderer.bounds.size;
+        var boundSize = modelRenderer.bounds.size;
         var desiredBoundSize = planet.ConvertedBounds;
         var scale = planet.transform.localScale;
 
@@ -103,7 +117,11 @@ public class PlanetScaler : MonoBehaviour
         
         planet.transform.localScale = newScale;
     }
+    
+    #endregion
 
+    #region To pleasant
+    
     /// <summary>
     /// Scales the planets to the same size.
     /// </summary>
@@ -141,4 +159,6 @@ public class PlanetScaler : MonoBehaviour
         
         planet.transform.localScale = newScale;
     }
+    
+    #endregion
 }
