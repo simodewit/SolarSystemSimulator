@@ -66,8 +66,6 @@ public class NavigationController : MonoBehaviour
         GetObjectReferences();
         CreateVirtualBox();
         SetCameraOffset();
-
-        InputManager.Instance.leftMouseButtonDrag += Pan;
     }
 
     /// <summary>
@@ -83,7 +81,23 @@ public class NavigationController : MonoBehaviour
         
         StayInBounds(); // Call this at the end to ensure the controller is clamped AFTER moving. (better experience)
     }
-    
+
+    /// <summary>
+    /// Called when the application starts or gets focused.
+    /// </summary>
+    private void OnEnable()
+    {
+        InputManager.Instance.leftMouseButtonDrag += Pan;
+    }
+
+    /// <summary>
+    /// Called when the application exits or another application gets focused.
+    /// </summary>
+    private void OnDisable()
+    {
+        InputManager.Instance.leftMouseButtonDrag -= Pan;
+    }
+
     #endregion
 
     #region Spawning
