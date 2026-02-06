@@ -20,6 +20,7 @@ public class SetSceneLoadImage : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        SceneController.Instance.SpawnInstance();
         GetReferences();
         SubscribeButton();
     }

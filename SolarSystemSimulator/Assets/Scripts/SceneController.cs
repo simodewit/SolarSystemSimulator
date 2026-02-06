@@ -37,7 +37,7 @@ public class SceneController : Singleton<SceneController>
         canvasObject.AddComponent<GraphicRaycaster>();
         
         var imageObject = new GameObject("FadingImage");
-        imageObject.transform.SetParent(imageObject.transform);
+        imageObject.transform.SetParent(canvasObject.transform);
         
         var image = imageObject.AddComponent<Image>();
         var imageTransform = image.GetComponent<RectTransform>();
@@ -52,6 +52,9 @@ public class SceneController : Singleton<SceneController>
         
         canvasObject.transform.SetParent(transform);
         _image = image;
+
+        _image.color = Color.clear;
+        _image.enabled = false;
     }
     
     #endregion
