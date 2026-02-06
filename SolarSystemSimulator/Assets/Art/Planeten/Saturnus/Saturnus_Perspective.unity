@@ -506,6 +506,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: ddfa1cecb9b060e488a9897f8eb28a39, type: 2}
+    - target: {fileID: -7511558181221131132, guid: c170e0b28d273fc4c960e5d7a3b25ce0, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c36ecec685da79c4bbae0930d92a17e6, type: 2}
     - target: {fileID: 919132149155446097, guid: c170e0b28d273fc4c960e5d7a3b25ce0, type: 3}
       propertyPath: m_Name
       value: Saturnus
