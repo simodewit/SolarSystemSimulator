@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,9 +9,17 @@ public class InputManager : Singleton<InputManager>
 {
     [Tooltip("This is where you will be able to find all your inputs and action maps.")]
     [HideInInspector] public MainInputs input;
+    [Tooltip("This gets called when the left mouse button has been released without dragging.")]
+    [HideInInspector] public Action leftMouseButtonClick;
+    [Tooltip("This gets called when the left mouse button is dragging.")]
+    [HideInInspector] public Action leftMouseButtonDrag;
     
     private Camera _camera;
     private PlanetModelButton _currentHover;
+    
+    private const int _dragThreshold = 5; // In pixels.
+    private Vector2 _mouseStartPosition;
+    private bool _hasDragged;
 
     private bool _canClick;
     private bool _canHover;
@@ -28,6 +37,7 @@ public class InputManager : Singleton<InputManager>
         _camera = Camera.main;
         _canHover = true;
         _canClick = true;
+        leftMouseButtonClick += OnClick;
     }
 
     /// <summary>
@@ -36,7 +46,6 @@ public class InputManager : Singleton<InputManager>
     private void OnEnable()
     {
         input.Enable();
-        input.Mouse.LeftButton.performed += OnClick;
     }
 
     /// <summary>
@@ -44,7 +53,6 @@ public class InputManager : Singleton<InputManager>
     /// </summary>
     private void OnDisable()
     {
-        input.Mouse.LeftButton.performed -= OnClick;
         input.Disable();
     }
 
@@ -54,10 +62,51 @@ public class InputManager : Singleton<InputManager>
     private void Update()
     {
         HandleHover();
+        ManageLeftClickHover();
     }
     
     #endregion
 
+    #region Left mouse button
+
+    /// <summary>
+    /// This method separates the click and hover functionality.
+    /// </summary>
+    private void ManageLeftClickHover()
+    {
+        if (input.Mouse.LeftButton.WasPressedThisFrame())
+        {
+            _mouseStartPosition = input.Mouse.Position.ReadValue<Vector2>();
+        }
+
+        if (input.Mouse.LeftButton.IsPressed())
+        {
+            var currentPosition = input.Mouse.Position.ReadValue<Vector2>();
+            var distance = Vector3.Distance(_mouseStartPosition, currentPosition);
+
+            if (distance > _dragThreshold)
+            {
+                leftMouseButtonDrag?.Invoke();
+                _hasDragged = true;
+            }
+        }
+
+        if (input.Mouse.LeftButton.WasReleasedThisFrame())
+        {
+            if (_hasDragged)
+            {
+                _hasDragged = false;
+                _mouseStartPosition = Vector2.zero;
+            }
+            else
+            {
+                leftMouseButtonClick?.Invoke();
+            }
+        }
+    }
+
+    #endregion
+    
     #region Planet selection
     
     /// <summary>
@@ -101,10 +150,8 @@ public class InputManager : Singleton<InputManager>
     /// <summary>
     /// Checks if the user clicks on a planet.
     /// </summary>
-    public void OnClick(InputAction.CallbackContext ctx)
+    public void OnClick()
     {
-        if (!ctx.performed) return;
-
         if (!_canClick) return;
         
         Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());

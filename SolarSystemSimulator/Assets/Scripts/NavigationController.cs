@@ -66,6 +66,8 @@ public class NavigationController : MonoBehaviour
         GetObjectReferences();
         CreateVirtualBox();
         SetCameraOffset();
+
+        InputManager.Instance.leftMouseButtonDrag += Pan;
     }
 
     /// <summary>
@@ -75,7 +77,6 @@ public class NavigationController : MonoBehaviour
     {
         if (_enableMovement)
         {
-            Pan();
             Rotate();
             Zoom();
         }
@@ -184,13 +185,6 @@ public class NavigationController : MonoBehaviour
     /// </summary>
     private void Pan()
     {
-        var clickPerformed = InputManager.Instance.input.Mouse.LeftButton.IsPressed();
-        
-        if (!clickPerformed)
-        {
-            return;
-        }
-        
         isPanning?.Invoke();
         
         var mouseDelta = InputManager.Instance.input.Mouse.Delta.ReadValue<Vector2>();

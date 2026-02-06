@@ -5,9 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/GalaxyScene.unity
+    guid: d0e07b0b17c6c684f94975560bd6e87a
+  - enabled: 1
+    path: Assets/Art/Planeten/Earth/Earth.unity
+    guid: b06412cced6723047a0a85eee87f6668
+  - enabled: 1
+    path: Assets/Art/Planeten/Jupiter/Jupiter_Perspective.unity
+    guid: d0734bef05e4f0e4ebe1b4e5cb309e00
+  - enabled: 1
+    path: Assets/Art/Planeten/Mercury/Mercury.unity
+    guid: 2e7a52b8e2e11494f83c62f456cbf215
+  - enabled: 1
+    path: Assets/Art/Planeten/Moon/Moon_Perspective.unity
+    guid: b5ef6d6960034624e9267f350709e5d4
+  - enabled: 1
+    path: Assets/Art/Planeten/Zon/Sun_Perspective.unity
+    guid: 9dd69586c6534ec4a8e6b7d912bb521d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
