@@ -14,7 +14,6 @@ public class InputManager : Singleton<InputManager>
     [Tooltip("This gets called when the left mouse button is dragging.")]
     [HideInInspector] public Action leftMouseButtonDrag;
     
-    private Camera _camera;
     private PlanetModelButton _currentHover;
     
     private const int _dragThreshold = 5; // In pixels.
@@ -34,7 +33,6 @@ public class InputManager : Singleton<InputManager>
         base.Awake(); // Call to ensure the singleton awake gets called.
 
         input = new MainInputs();
-        _camera = Camera.main;
         _canHover = true;
         _canClick = true;
         leftMouseButtonClick += OnClick;
@@ -117,7 +115,7 @@ public class InputManager : Singleton<InputManager>
         if (!_canHover) return;
 
         // Ray from camera to mouse
-        Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -154,7 +152,7 @@ public class InputManager : Singleton<InputManager>
     {
         if (!_canClick) return;
         
-        Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             hit.collider.SendMessage("OnClicked", SendMessageOptions.DontRequireReceiver);

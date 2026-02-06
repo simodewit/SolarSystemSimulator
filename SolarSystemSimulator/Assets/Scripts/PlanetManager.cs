@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro.EditorUtilities;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlanetManager : MonoBehaviour
 {
@@ -84,13 +85,13 @@ public class PlanetManager : MonoBehaviour
 
     public int ToPlanetPOV()
     {
+        InputManager.Instance.ToggleHover(true);
         if (_currentPlanet != null)
         {
             return _currentPlanet.GetSceneIndex();
         }
         else
         {
-            Debug.LogError("There is no planet selected");
             return 0;
         }
         // When the scene load script is made this function returns the selected planets scene index
