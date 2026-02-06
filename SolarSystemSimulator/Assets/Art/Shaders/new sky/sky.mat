@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3050
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Triplanar_838b1b68fef54ba0b943d1b23c99c7de_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4be1c40dc20945d46986fa5eaf41f8c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -40,11 +44,13 @@ Material:
     m_Floats:
     - _Height: 0.025
     - _Highlights: 0.1
-    - _QueueControl: 0
-    - _QueueOffset: 0
+    - _Intensity2: 4.19
+    - _QueueControl: 1
+    - _QueueOffset: 50
     - _Speed: 1.5
     - _StarIntensity: 7
     - _Stars: 500
+    - _highlight2: 0.02
     m_Colors:
     - _Bottom: {r: 0, g: 0, b: 0, a: 0}
     - _StarColor: {r: 1, g: 1, b: 1, a: 0}

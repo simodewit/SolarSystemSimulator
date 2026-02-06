@@ -233,7 +233,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5495,15 +5495,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.99583834
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.99583834
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.99583834
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5519,7 +5519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.50216305
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5527,7 +5527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.864773
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5539,7 +5539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 119.714
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9852d960c46a50a4c9949ff57d5424f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
