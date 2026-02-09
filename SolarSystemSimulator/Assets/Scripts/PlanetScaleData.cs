@@ -12,6 +12,8 @@ public class PlanetScaleData : MonoBehaviour
     public Transform scaleTransform;
     [Tooltip("The renderer of the model.")]
     public Renderer modelRenderer;
+    [Tooltip("The ring that shows the trajectory of the planet.")]
+    public MeshFilter ringRenderer;
     
     [Header("Positioning")]
     [Tooltip("The size of the planet bounds when in pleasant mode.")]

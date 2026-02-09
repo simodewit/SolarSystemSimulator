@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class will let any object rotate.
@@ -17,6 +18,10 @@ public class ObjectRotater : MonoBehaviour
     [SerializeField] private float _ySpeed = 5f;
     [Tooltip("If turned on this script will rotate around the Z axis.")]
     [SerializeField] private float _zSpeed = 0;
+
+    [Header("Multiplier")] 
+    [Tooltip("Multiplies the speeds. Useful to work with small or big units to convert them to your wanted speeds.")] 
+    [SerializeField] private float _multiplier = 1f;
     
     #endregion
     
@@ -64,9 +69,9 @@ public class ObjectRotater : MonoBehaviour
     {
         var rotation = new Vector3(0, 0, 0);
         
-        rotation.x = _xSpeed * Time.deltaTime;
-        rotation.y = _ySpeed * Time.deltaTime;
-        rotation.z = _zSpeed * Time.deltaTime;
+        rotation.x = _xSpeed * _multiplier * Time.deltaTime;
+        rotation.y = _ySpeed * _multiplier * Time.deltaTime;
+        rotation.z = _zSpeed * _multiplier * Time.deltaTime;
         
         _target.Rotate(rotation);
     }

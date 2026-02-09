@@ -34,7 +34,7 @@ public class PlanetScaler : MonoBehaviour
     
     #endregion
     
-    #region Rotation
+    #region Toggle scaling
 
     /// <summary>
     /// This method will set the scale for the planets directly.
@@ -43,15 +43,11 @@ public class PlanetScaler : MonoBehaviour
     {
         if (_planets.Length == 0)
         {
-            Debug.LogWarning($"There are no planets referenced. \n GameObject: {gameObject.name} \n Script: PlanetScaleData.cs");
+            Debug.LogWarning($"There are no planets referenced. \n GameObject: {gameObject.name} \n Script: PlanetScaler.cs");
             return;
         }
         
-        foreach (var planet in _planets)
-        {
-            var newScale = new Vector3(planet.PleasantBounds, planet.PleasantBounds, planet.PleasantBounds);
-            planet.transform.localScale = newScale;
-        }
+        ScaleToPleasant();
     }
     
     /// <summary>
@@ -84,6 +80,7 @@ public class PlanetScaler : MonoBehaviour
         {
             StartCoroutine(ScaleToRealistic(planet));
             StartCoroutine(PositionToRealistic(planet));
+            StartCoroutine(ScaleRingToRealistic(planet));
         }
     }
 
@@ -107,7 +104,7 @@ public class PlanetScaler : MonoBehaviour
 
         var duration = _lerpTime;
         var elapsed = 0f;
-
+        
         while (elapsed < duration)
         {
             var time = elapsed / duration;
@@ -145,6 +142,43 @@ public class PlanetScaler : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+        
+        planet.transform.localPosition = newPosition;
+    }
+
+    /// <summary>
+    /// Scales the ring from the planet to the realistic size.
+    /// </summary>
+    private IEnumerator ScaleRingToRealistic(PlanetScaleData planet)
+    {
+        if (planet.ringRenderer == null)
+        {
+            yield break;
+        }
+        
+        var bounds = planet.ringRenderer.sharedMesh.bounds;
+        var position = planet.ConvertedPosition;
+        var desiredBoundSize = Mathf.Max(position.x, position.y, position.z) * 2f;
+        
+        var scale = planet.ringRenderer.transform.localScale;
+
+        var scaleMultiplier = desiredBoundSize / (bounds.size.x * scale.x);
+        var newScale = scale * scaleMultiplier;
+        
+        var duration = _lerpTime;
+        var elapsed = 0f;
+        
+        while (elapsed < duration)
+        {
+            var time = elapsed / duration;
+
+            planet.ringRenderer.transform.localScale = Vector3.Lerp(scale, newScale, time);
+            
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        
+        planet.ringRenderer.transform.localScale = newScale;
     }
     
     #endregion
@@ -160,6 +194,7 @@ public class PlanetScaler : MonoBehaviour
         {
             StartCoroutine(ScaleToPleasant(planet));
             StartCoroutine(PositionToPleasant(planet));
+            StartCoroutine(ScaleRingToPleasant(planet));
         }
     }
     
@@ -195,7 +230,6 @@ public class PlanetScaler : MonoBehaviour
         }
         
         planet.transform.localScale = newScale;
-        
         InputManager.Instance.ToggleClick(true);
     }
 
@@ -221,6 +255,43 @@ public class PlanetScaler : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+        
+        planet.transform.localPosition = newPosition;
+    }
+    
+    /// <summary>
+    /// Scales the ring from the planet to the pleasant size.
+    /// </summary>
+    private IEnumerator ScaleRingToPleasant(PlanetScaleData planet)
+    {
+        if (planet.ringRenderer == null)
+        {
+            yield break;
+        }
+        
+        var bounds = planet.ringRenderer.sharedMesh.bounds;
+        var position = planet.PleasantPosition;
+        var desiredBoundSize = Mathf.Max(position.x, position.y, position.z) * 2f;
+        
+        var scale = planet.ringRenderer.transform.localScale;
+
+        var scaleMultiplier = desiredBoundSize / (bounds.size.x * scale.x);
+        var newScale = scale * scaleMultiplier;
+        
+        var duration = _lerpTime;
+        var elapsed = 0f;
+        
+        while (elapsed < duration)
+        {
+            var time = elapsed / duration;
+            
+            planet.ringRenderer.transform.localScale = Vector3.Lerp(scale, newScale, time);
+            
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        planet.ringRenderer.transform.localScale = newScale;
     }
     
     #endregion
