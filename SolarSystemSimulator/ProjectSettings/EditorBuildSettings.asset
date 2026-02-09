@@ -26,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Art/Planeten/Zon/Sun_Perspective.unity
     guid: 9dd69586c6534ec4a8e6b7d912bb521d
+  - enabled: 1
+    path: Assets/Art/Planeten/Mars/Mars.unity
+    guid: 6e2b429f352287b4c8da56970ce5b5f2
+  - enabled: 1
+    path: Assets/Art/Planeten/Saturnus/Saturnus_Perspective.unity
+    guid: f5a2c747a0463d94aa91ad53e9be2253
+  - enabled: 1
+    path: Assets/Art/Planeten/Uranus/Uranus_Perspective.unity
+    guid: cb73c8f87e9c8cb429b8d0dc552a391f
+  - enabled: 1
+    path: Assets/Art/Planeten/Venus/Venus.unity
+    guid: c5c75baae88b2ae46879f16ef1bc1b8e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
