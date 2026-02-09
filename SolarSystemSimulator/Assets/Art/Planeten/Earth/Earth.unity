@@ -904,79 +904,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &561616254
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5121633802281412994, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_Name
-      value: Clouds Sphere (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 9.4343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 9.4343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 9.4343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.63930726
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.030718481
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.3441608
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.68694687
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 30.805
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -27.593
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501255118486352696, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 86.374
-      objectReference: {fileID: 0}
-    - target: {fileID: 6634733256282622039, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 466045570f5f1944cba134cb3735e0da, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 17ebe32d18b1b7c40b5b9e961cbd7f04, type: 3}
 --- !u!1001 &571070910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1118,6 +1045,15 @@ PrefabInstance:
     - target: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978425643554459981, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Gras
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Gras bedekt bijna 40% van het landoppervlak van de aarde en heeft diepe
+        wortels die erosie voorkomen en grote hoeveelheden koolstof in de bodem opslaan.
       objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
@@ -2089,6 +2025,15 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4978425643554459981, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Ongeveer 71% van de aarde is bedekt met water, en dat water reguleert
+        de temperatuur van de planeet door warmte op te slaan en langzaam af te geven.
+      objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2358,6 +2303,24 @@ PrefabInstance:
     - target: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978425643554459981, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Bomen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: "Bomen op aarde produceren samen ongeveer 28% van de zuurstof in de
+        atmosfeer en slaan daarbij enorme hoeveelheden CO\u2082 op, waardoor ze een
+        cruciale rol spelen in het stabiliseren van het klimaat. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_fontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
@@ -3352,75 +3315,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6210037950515171518, guid: 80e5ade85010c5f45ab3d4f1da050b45, type: 3}
   m_PrefabInstance: {fileID: 1907590907}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1977303274
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8431536002958489394, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_Name
-      value: Earth
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 9.0893
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 9.0893
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 9.0893
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099811110926790024, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a1ab77624b59ff94eb05c3f0f28ffdfa, type: 3}
 --- !u!1001 &2016695824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4280,14 +4174,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef8e9400c3788f4b8209b843bb472e3, type: 3}
+--- !u!1001 &7475388765248708156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519561846327071412, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038795855141505038, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
+      propertyPath: m_Name
+      value: Earth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c6e602cb0a5a0d4caaf8bbb99ab0fdd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2079389979}
   - {fileID: 10444838}
-  - {fileID: 561616254}
-  - {fileID: 1977303274}
+  - {fileID: 7475388765248708156}
   - {fileID: 6792713099544054285}
   - {fileID: 2016695824}
   - {fileID: 184906077}

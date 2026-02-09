@@ -133,7 +133,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978425643554459981, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: '    Olympus Mons'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Olympus Mons is ongeveer 22 km hoog en bijna drie keer zo hoog als de
+        Mount Everest, waardoor het de grootste bekende vulkaan in het zonnestelsel
+        is.
       objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
@@ -941,7 +951,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1001 &9167572580924783681
+--- !u!1001 &8812799834757791100
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -949,65 +959,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5072449276667974866, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 078d5722ab127674e921115599c92750, type: 2}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8315759220788767210, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
+      propertyPath: m_Name
+      value: Mars
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6210421423159422909, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+    - target: {fileID: 8659386752617378640, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6729514522665874695, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
-      propertyPath: m_Name
-      value: Mercury
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c2845e2c1bff0e44b958f5d3b59401f3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f8092693d9b2ad2459b72e8c84b4323f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2079389979}
-  - {fileID: 9167572580924783681}
+  - {fileID: 8812799834757791100}
   - {fileID: 951677323}
   - {fileID: 1926133773}
   - {fileID: 1843597667}
