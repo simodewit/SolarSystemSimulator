@@ -10,9 +10,6 @@
             "m_Id": "9bfa8529591249e8b2439a5f9771b2c1"
         },
         {
-            "m_Id": "819f7693cef84500890bcb59953e2641"
-        },
-        {
             "m_Id": "f9a73878631f497ab9746aac1a8c8c1f"
         },
         {
@@ -789,7 +786,7 @@
     "m_ObjectId": "0782ee1750f94be89fd77447ca25fc31",
     "m_Title": "Distortion",
     "m_Position": {
-        "x": -2626.400146484375,
+        "x": -2626.39990234375,
         "y": 321.5999755859375
     }
 }
@@ -1510,7 +1507,7 @@
     "m_ObjectId": "21a7fe5601d449128050163eec33247d",
     "m_Title": "Moving Clouds",
     "m_Position": {
-        "x": -2212.000244140625,
+        "x": -2212.0,
         "y": -546.4000244140625
     }
 }
@@ -1816,7 +1813,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "48d59716bcea4ac5ba53a5372f46a1db",
     "m_Id": 0,
-    "m_DisplayName": "Tilling",
+    "m_DisplayName": "CloudsTilling",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1979,9 +1976,9 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "`CloudsDistortion",
+    "m_Name": "CloudsDistortion",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "`CloudsDistortion",
+    "m_RefNameGeneratedByDisplayName": "CloudsDistortion",
     "m_DefaultReferenceName": "_CloudsDistortion",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -2444,50 +2441,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "819f7693cef84500890bcb59953e2641",
-    "m_Guid": {
-        "m_GuidSerialized": "debc866d-7778-40b4-85a9-d84a21711570"
-    },
-    "promotedFromAssetID": "",
-    "promotedFromCategoryName": "",
-    "promotedOrdering": -1,
-    "m_Name": "CloudsDistance",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "CloudsDistance",
-    "m_DefaultReferenceName": "_CloudsDistance",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_PerRendererData": false,
-    "m_customAttributes": [],
-    "m_Value": 0.4000000059604645,
-    "m_FloatType": 0,
-    "m_LiteralFloatMode": false,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    },
-    "m_SliderType": 0,
-    "m_SliderPower": 3.0,
-    "m_EnumType": 0,
-    "m_CSharpEnumString": "",
-    "m_EnumNames": [
-        "Default"
-    ],
-    "m_EnumValues": [
-        0
-    ]
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "850a331958dd4ad9ba929382e6fdeacd",
@@ -2545,7 +2498,7 @@
     "m_ObjectId": "88ffee787c174a85b20dcf72a84f2e5b",
     "m_Title": "Opacity",
     "m_Position": {
-        "x": -448.800048828125,
+        "x": -448.7998046875,
         "y": 333.5999755859375
     }
 }
@@ -2743,10 +2696,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "Tilling",
+    "m_Name": "CloudsTilling",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Tilling",
-    "m_DefaultReferenceName": "_Tilling",
+    "m_RefNameGeneratedByDisplayName": "CloudsTilling",
+    "m_DefaultReferenceName": "_CloudsTilling",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3385,7 +3338,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "bc7e2d79a33b4c1b8194026538b76c0a",
     "m_Id": 0,
-    "m_DisplayName": "`CloudsDistortion",
+    "m_DisplayName": "CloudsDistortion",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3523,9 +3476,6 @@
         },
         {
             "m_Id": "9bfa8529591249e8b2439a5f9771b2c1"
-        },
-        {
-            "m_Id": "819f7693cef84500890bcb59953e2641"
         },
         {
             "m_Id": "f9a73878631f497ab9746aac1a8c8c1f"
@@ -4078,8 +4028,8 @@
     "m_ObjectId": "de45727bc509435692034e19073210c2",
     "m_Title": "Texture",
     "m_Position": {
-        "x": -1920.8001708984375,
-        "y": -142.39996337890626
+        "x": -1920.80029296875,
+        "y": -142.40000915527345
     }
 }
 
@@ -4088,7 +4038,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "e4588b0e67554461be21a2567339de3e",
     "m_Id": 0,
-    "m_DisplayName": "Tilling",
+    "m_DisplayName": "CloudsTilling",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

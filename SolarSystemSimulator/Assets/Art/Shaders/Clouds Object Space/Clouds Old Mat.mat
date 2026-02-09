@@ -65,6 +65,7 @@ Material:
     m_Colors:
     - _CloudsColor: {r: 12.015093, g: 12.015093, b: 12.015093, a: 1}
     - _CloudsSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
+    - _CloudsTilling: {r: 5, g: 5, b: 0, a: 0}
     - _Color: {r: 0.7509433, g: 0.7509433, b: 0.7509433, a: 0}
     - _Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Tilling: {r: 5, g: 5, b: 0, a: 0}
