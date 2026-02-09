@@ -620,6 +620,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 892154544}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &892154546 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 892154544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951677323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -704,6 +709,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c1e2c3c94ef2ab2408869ed0ea0785d8, type: 3}
   m_PrefabInstance: {fileID: 951677323}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1133517949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+  m_PrefabInstance: {fileID: 1926133773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133517951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133517949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 0}
+  _panelCanvasGroup: {fileID: 892154546}
+  _speed: 0.2
 --- !u!1001 &1172157205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,7 +1146,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
       insertIndex: 0
       addedObject: {fileID: 892154545}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1133517951}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
 --- !u!224 &1926133774 stripped
 RectTransform:

@@ -5150,13 +5150,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
       insertIndex: 0
       addedObject: {fileID: 2052052605}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502837449}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
 --- !u!224 &1215063353 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
   m_PrefabInstance: {fileID: 1215063352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502837447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+  m_PrefabInstance: {fileID: 1215063352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1502837449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502837447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 0}
+  _panelCanvasGroup: {fileID: 2052052606}
+  _speed: 0.2
 --- !u!1001 &2052052604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5287,6 +5310,11 @@ PrefabInstance:
 --- !u!224 &2052052605 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 2052052604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &2052052606 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 2052052604}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067469898

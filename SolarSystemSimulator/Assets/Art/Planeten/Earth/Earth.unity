@@ -694,13 +694,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
       insertIndex: -1
       addedObject: {fileID: 927830469}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 296341245}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
 --- !u!224 &266697774 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
   m_PrefabInstance: {fileID: 266697773}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &296341239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+  m_PrefabInstance: {fileID: 266697773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &296341245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296341239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 0}
+  _panelCanvasGroup: {fileID: 1119473479}
+  _speed: 0.2
 --- !u!1001 &380666023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1157,6 +1180,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 694614185}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &694614188 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 694614185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &712409450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1540,7 +1568,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7516299406052969215, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870255919}
   m_SourcePrefab: {fileID: 100100000, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
 --- !u!224 &927830469 stripped
 RectTransform:
@@ -2136,6 +2167,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 1056612936}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1056612939 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 1056612936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103639561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,9 +2346,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_text
-      value: "Bomen op aarde produceren samen ongeveer 28% van de zuurstof in de
-        atmosfeer en slaan daarbij enorme hoeveelheden CO\u2082 op, waardoor ze een
-        cruciale rol spelen in het stabiliseren van het klimaat. "
+      value: 'Bomen op aarde produceren samen ongeveer 28% van de zuurstof in de
+        atmosfeer en slaan daarbij enorme hoeveelheden CO2 op, waardoor ze een cruciale
+        rol spelen in het stabiliseren van het klimaat. '
       objectReference: {fileID: 0}
     - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_fontSize
@@ -2422,6 +2458,11 @@ PrefabInstance:
 --- !u!224 &1119473477 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 1119473476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1119473479 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 1119473476}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1193235244
@@ -3253,6 +3294,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6210037950515171518, guid: 80e5ade85010c5f45ab3d4f1da050b45, type: 3}
   m_PrefabInstance: {fileID: 1834670704}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1870255914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7516299406052969215, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
+  m_PrefabInstance: {fileID: 927830468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870255919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870255914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 0}
+  _panelCanvasGroup: {fileID: 1056612939}
+  _speed: 0.2
 --- !u!1001 &1907590907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3314,6 +3375,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6210037950515171518, guid: 80e5ade85010c5f45ab3d4f1da050b45, type: 3}
   m_PrefabInstance: {fileID: 1907590907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1924084304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7516299406052969215, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
+  m_PrefabInstance: {fileID: 2113806586}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2016695824
 PrefabInstance:
@@ -3792,13 +3858,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7516299406052969215, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2113806592}
   m_SourcePrefab: {fileID: 100100000, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
 --- !u!224 &2113806587 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3527374993766658822, guid: 932c40da02c355346bfa3a96cc94aa10, type: 3}
   m_PrefabInstance: {fileID: 2113806586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113806592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924084304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 0}
+  _panelCanvasGroup: {fileID: 694614188}
+  _speed: 0.2
 --- !u!1 &2129828499
 GameObject:
   m_ObjectHideFlags: 0
