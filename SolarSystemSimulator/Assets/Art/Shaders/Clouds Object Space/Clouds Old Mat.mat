@@ -52,12 +52,19 @@ Material:
     m_Ints: []
     m_Floats:
     - _Clouds: 10
-    - _Distance: 0.41
+    - _CloudsDistance: 5
+    - _CloudsDistortion: 10
+    - _CloudsOpacity: 4
+    - _CloudsPower: 2
+    - _CloudsScale: 10
+    - _Distance: 0.4
     - _MaxSpeed: 0.5
     - _MinSpeed: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
+    - _CloudsColor: {r: 12.015093, g: 12.015093, b: 12.015093, a: 1}
+    - _CloudsSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
     - _Color: {r: 0.7509433, g: 0.7509433, b: 0.7509433, a: 0}
     - _Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Tilling: {r: 5, g: 5, b: 0, a: 0}
