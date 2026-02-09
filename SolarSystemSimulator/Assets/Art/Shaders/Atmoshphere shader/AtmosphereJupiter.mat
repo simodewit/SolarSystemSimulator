@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AtmosphereSize: 10.6
-    - _AtmosphereStrength: 100
+    - _AtmosphereSize: 5.75
+    - _AtmosphereStrength: 91.25
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.54322815, g: 0.17064758, b: 0, a: 1}
+    - _Color: {r: 0.26415092, g: 0.11768314, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7637530674462007478
