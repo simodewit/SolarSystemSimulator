@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
@@ -762,6 +762,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
   m_PrefabInstance: {fileID: 1330979557}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1330979559 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+  m_PrefabInstance: {fileID: 1330979557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1783298078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -863,18 +868,53 @@ PrefabInstance:
       value: Surface Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 997924750423399593, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1330979558}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1783298082}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
 --- !u!224 &1783298079 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1164028022725742900, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
   m_PrefabInstance: {fileID: 1783298078}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1783298080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6026493084660880542, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+  m_PrefabInstance: {fileID: 1783298078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1783298081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7977168454967311250, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+  m_PrefabInstance: {fileID: 1783298078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783298080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1783298082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783298080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41422e57111844e488e1bd1704eb8f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotSpotButton
+  _button: {fileID: 1783298081}
+  _panelCanvasGroup: {fileID: 1330979559}
+  _speed: 0.2
 --- !u!1001 &2061924296
 PrefabInstance:
   m_ObjectHideFlags: 0
