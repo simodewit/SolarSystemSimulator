@@ -4,7 +4,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Triggers the SceneController to start loading in the next scene.
 /// </summary>
-public class SetSceneLoadImage : MonoBehaviour
+public class SceneControllerButton : MonoBehaviour
 {
     #region Variables
     
