@@ -47,7 +47,7 @@ public class PlanetScaler : MonoBehaviour
             return;
         }
         
-        ScaleToPleasant();
+        ScaleToPleasant(0.1f);
     }
     
     /// <summary>
@@ -57,11 +57,11 @@ public class PlanetScaler : MonoBehaviour
     {
         if (_isRealScale)
         {
-            ScaleToPleasant();
+            ScaleToPleasant(_lerpTime);
         }
         else
         {
-            ScaleToRealistic();
+            ScaleToRealistic(_lerpTime);
         }
         
         _isRealScale = !_isRealScale;
@@ -74,13 +74,13 @@ public class PlanetScaler : MonoBehaviour
     /// <summary>
     /// This will start the coroutine for every planet at the same time to scale at the same moment.
     /// </summary>
-    private void ScaleToRealistic()
+    private void ScaleToRealistic(float speed)
     {
         foreach (var planet in _planets)
         {
-            StartCoroutine(ScaleToRealistic(planet));
-            StartCoroutine(PositionToRealistic(planet));
-            StartCoroutine(ScaleRingToRealistic(planet));
+            StartCoroutine(ScaleToRealistic(planet, speed));
+            StartCoroutine(PositionToRealistic(planet, speed));
+            StartCoroutine(ScaleRingToRealistic(planet, speed));
         }
     }
 
@@ -88,8 +88,9 @@ public class PlanetScaler : MonoBehaviour
     /// This method will start the planet scaling to get the scale to a realistic size relative to the other planets.
     /// </summary>
     /// <param name="planet"> The planet to scale. </param>
+    /// <param name="speed"> The speed to lerp. </param>
     /// <returns></returns>
-    private IEnumerator ScaleToRealistic(PlanetScaleData planet)
+    private static IEnumerator ScaleToRealistic(PlanetScaleData planet, float speed)
     {
         InputManager.Instance.ToggleClick(false);
         
@@ -102,7 +103,7 @@ public class PlanetScaler : MonoBehaviour
         var scaleMultiplier = desiredBoundSize / boundSize.y;
         var newScale = scale * scaleMultiplier;
 
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
         
         while (elapsed < duration)
@@ -124,13 +125,14 @@ public class PlanetScaler : MonoBehaviour
     /// This method will start the planet positioning to get the position to a realistic position relative to the other planets.
     /// </summary>
     /// <param name="planet"> The planet to position. </param>
+    /// <param name="speed"> The speed to lerp. </param>
     /// <returns></returns>
-    private IEnumerator PositionToRealistic(PlanetScaleData planet)
+    private static IEnumerator PositionToRealistic(PlanetScaleData planet, float speed)
     {
         var position = planet.transform.localPosition;
         var newPosition = planet.ConvertedPosition;
         
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
         
         while (elapsed < duration)
@@ -149,7 +151,9 @@ public class PlanetScaler : MonoBehaviour
     /// <summary>
     /// Scales the ring from the planet to the realistic size.
     /// </summary>
-    private IEnumerator ScaleRingToRealistic(PlanetScaleData planet)
+    /// <param name="planet"> The planet to position. </param>
+    /// <param name="speed"> The speed to lerp. </param>
+    private static IEnumerator ScaleRingToRealistic(PlanetScaleData planet, float speed)
     {
         if (planet.ringRenderer == null)
         {
@@ -165,7 +169,7 @@ public class PlanetScaler : MonoBehaviour
         var scaleMultiplier = desiredBoundSize / (bounds.size.x * scale.x);
         var newScale = scale * scaleMultiplier;
         
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
         
         while (elapsed < duration)
@@ -188,13 +192,13 @@ public class PlanetScaler : MonoBehaviour
     /// <summary>
     /// Scales the planets to the same size.
     /// </summary>
-    private void ScaleToPleasant()
+    private void ScaleToPleasant(float speed)
     {
         foreach (var planet in _planets)
         {
-            StartCoroutine(ScaleToPleasant(planet));
-            StartCoroutine(PositionToPleasant(planet));
-            StartCoroutine(ScaleRingToPleasant(planet));
+            StartCoroutine(ScaleToPleasant(planet, speed));
+            StartCoroutine(PositionToPleasant(planet, speed));
+            StartCoroutine(ScaleRingToPleasant(planet, speed));
         }
     }
     
@@ -202,8 +206,9 @@ public class PlanetScaler : MonoBehaviour
     /// This method will start the planet scaling to get the scale to a pleasant size to look at.
     /// </summary>
     /// <param name="planet"> The planet to scale. </param>
+    /// <param name="speed"> The speed to lerp. </param>
     /// <returns></returns>
-    private IEnumerator ScaleToPleasant(PlanetScaleData planet)
+    private static IEnumerator ScaleToPleasant(PlanetScaleData planet, float speed)
     {
         InputManager.Instance.ToggleClick(false);
         
@@ -216,7 +221,7 @@ public class PlanetScaler : MonoBehaviour
         var scaleMultiplier = desiredBoundSize / boundSize.y;
         var newScale = scale * scaleMultiplier;
         
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
 
         while (elapsed < duration)
@@ -237,13 +242,14 @@ public class PlanetScaler : MonoBehaviour
     /// This method will start the planet positioning to get the scale to a pleasant position to look at.
     /// </summary>
     /// <param name="planet"> The planet to position. </param>
+    /// <param name="speed"> The speed to lerp. </param>
     /// <returns></returns>
-    private IEnumerator PositionToPleasant(PlanetScaleData planet)
+    private static IEnumerator PositionToPleasant(PlanetScaleData planet, float speed)
     {
         var position = planet.transform.localPosition;
         var newPosition = planet.PleasantPosition;
         
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
         
         while (elapsed < duration)
@@ -262,7 +268,9 @@ public class PlanetScaler : MonoBehaviour
     /// <summary>
     /// Scales the ring from the planet to the pleasant size.
     /// </summary>
-    private IEnumerator ScaleRingToPleasant(PlanetScaleData planet)
+    /// <param name="planet"> The planet to position. </param>
+    /// <param name="speed"> The speed to lerp. </param>
+    private static IEnumerator ScaleRingToPleasant(PlanetScaleData planet, float speed)
     {
         if (planet.ringRenderer == null)
         {
@@ -278,7 +286,7 @@ public class PlanetScaler : MonoBehaviour
         var scaleMultiplier = desiredBoundSize / (bounds.size.x * scale.x);
         var newScale = scale * scaleMultiplier;
         
-        var duration = _lerpTime;
+        var duration = speed;
         var elapsed = 0f;
         
         while (elapsed < duration)
