@@ -1240,6 +1240,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _sceneIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRenderer
       value: 
       objectReference: {fileID: 1465373792}
@@ -2422,6 +2426,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _sceneIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRenderer
       value: 
       objectReference: {fileID: 2764669109104967982}
@@ -2804,6 +2812,10 @@ PrefabInstance:
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _sceneIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRenderer
@@ -4621,6 +4633,10 @@ PrefabInstance:
     - target: {fileID: 3600112711965486151, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_Name
       value: Zon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _sceneIndex
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetManager
