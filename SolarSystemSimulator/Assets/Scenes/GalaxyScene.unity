@@ -211,6 +211,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aarde
       objectReference: {fileID: 0}
+    - target: {fileID: 3810164506224972187, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: De enige bekende planeet met vloeibaar water aan het oppervlak en leven;
+        heeft een beschermende atmosfeer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Aarde
+      objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
       value: 1
@@ -3217,6 +3226,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3810164506224972187, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: "Een koude, droge planeet met ijs aan de polen en sporen van vroeger
+        water, bekend als de \u201Crode planeet\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Mars
+      objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
       value: 6
@@ -3962,6 +3980,15 @@ PrefabInstance:
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810164506224972187, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Ongeveer even groot als de aarde, maar met een zeer dichte CO2-atmosfeer
+        en extreme hitte door een sterk broeikaseffect.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Venus
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
@@ -5069,6 +5096,15 @@ PrefabInstance:
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810164506224972187, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: De kleinste planeet en het dichtst bij de zon; heeft grote temperatuurverschillen
+        en bijna geen atmosfeer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Mercurius
       objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
