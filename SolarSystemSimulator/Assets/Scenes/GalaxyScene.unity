@@ -240,6 +240,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 15
       objectReference: {fileID: 0}
@@ -261,6 +265,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -361,6 +373,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 959162776}
     m_Modifications:
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.3229345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.53024995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -307.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 66.281
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 75
@@ -426,6 +470,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2066258608}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 75
       objectReference: {fileID: 0}
@@ -439,6 +487,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1823,6 +1879,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1465373792}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 60
       objectReference: {fileID: 0}
@@ -1841,6 +1901,14 @@ PrefabInstance:
     - target: {fileID: 7475950515803174523, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_Radius
       value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -2545,7 +2613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectRotater
   _target: {fileID: 0}
   _xSpeed: 0
-  _ySpeed: 9.7
+  _ySpeed: 24.1
   _zSpeed: 0
   _multiplier: 0.1
 --- !u!4 &859429342
@@ -2851,7 +2919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectRotater
   _target: {fileID: 0}
   _xSpeed: 0
-  _ySpeed: 9.7
+  _ySpeed: 6.8
   _zSpeed: 0
   _multiplier: 0.1
 --- !u!4 &959162776
@@ -3085,6 +3153,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 859429342}
     m_Modifications:
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -277
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.2
@@ -3150,6 +3242,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2764669109104967982}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 30
       objectReference: {fileID: 0}
@@ -3163,6 +3259,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3381,6 +3485,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 45
       objectReference: {fileID: 0}
@@ -3402,6 +3510,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
@@ -3537,6 +3653,14 @@ PrefabInstance:
       propertyPath: planetPleasantBounds
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1
@@ -3670,7 +3794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectRotater
   _target: {fileID: 0}
   _xSpeed: 0
-  _ySpeed: 9.7
+  _ySpeed: 47.9
   _zSpeed: 0
   _multiplier: 0.1
 --- !u!4 &1320759195
@@ -3791,6 +3915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555308758}
     m_Modifications:
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -263.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 57.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.13
@@ -3856,6 +3988,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 388101896}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: _planetPleasantBounds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
       value: 10
       objectReference: {fileID: 0}
@@ -3869,6 +4005,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4534,7 +4678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectRotater
   _target: {fileID: 0}
   _xSpeed: 0
-  _ySpeed: 9.7
+  _ySpeed: 35
   _zSpeed: 0
   _multiplier: 0.1
 --- !u!1 &1555846415
@@ -4878,6 +5022,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1320759195}
     m_Modifications:
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -273.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864548586411228539, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73
+      objectReference: {fileID: 0}
     - target: {fileID: 3085616680610115827, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -4944,7 +5096,7 @@ PrefabInstance:
       objectReference: {fileID: 498429386}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantBounds
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetPleasantPosition.x
@@ -4960,6 +5112,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5573,6 +5733,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092613729246381854, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _planetRealisticPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646565286500416901, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707119566860308666, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211844447413678542, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
