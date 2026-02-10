@@ -156,10 +156,13 @@ public class InputManager : Singleton<InputManager>
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             hit.collider.SendMessage("OnClicked", SendMessageOptions.DontRequireReceiver);
-            PlanetModelButton planetHit = hit.transform.GetComponent<PlanetModelButton>();
-            if (planetHit != null)
+            if (hit.transform.GetComponent<PlanetModelButton>() != null)
             {
-                planetHit.OnPlanetClicked();
+                PlanetModelButton planetHit = hit.transform.GetComponent<PlanetModelButton>();
+                if (planetHit != null)
+                {
+                    planetHit.OnPlanetClicked();
+                }
             }
         }
     }
