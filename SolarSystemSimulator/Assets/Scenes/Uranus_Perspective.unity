@@ -527,6 +527,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5071058998836188529, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      propertyPath: m_text
+      value: 'De atmosfeer van Uranus bestaat uit een dikke laag van waterstof, helium
+        en een beetje methaan. De zonlicht die de planeet bereikt bestaat uit alle
+        kleuren van het spectrum. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325246147513256668, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
+      propertyPath: m_text
+      value: 'Oppervlak
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6143053824595196305, guid: 3dc8f8223aa7a7142a0659f13940ca87, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -391

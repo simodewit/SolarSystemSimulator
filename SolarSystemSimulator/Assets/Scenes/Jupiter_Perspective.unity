@@ -654,7 +654,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478484541685927873, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Alpha
-      value: 0.02
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783871195904495299, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000078678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783871195904495299, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00000095367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978425643554459981, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: Rode Vlek
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373354953515732704, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
+      propertyPath: m_text
+      value: De Rode Vlek is een van de opvallendste eigenaardigheden van Jupiter.
+        De reden dat de vlek zo lang blijft bestaan komt omdat hij constant beweegt,
+        interne warmte van Jupiter krijgt en kleine stormen absorbeert.
       objectReference: {fileID: 0}
     - target: {fileID: 6463081566671217152, guid: 487e53d3d05a41646a6107ba49ef964d, type: 3}
       propertyPath: m_Pivot.x
