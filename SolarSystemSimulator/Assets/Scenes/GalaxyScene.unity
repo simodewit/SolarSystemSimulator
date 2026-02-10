@@ -981,6 +981,53 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6211296928831812404, guid: 7ed934c87728d6149acb645968254b4d, type: 3}
   m_PrefabInstance: {fileID: 388101894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &422101592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422101594}
+  - component: {fileID: 422101593}
+  m_Layer: 0
+  m_Name: StartZoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &422101593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422101592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d538a69b12e63840991c72a7d04878d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartZoom
+  _time: 2
+  _position: {x: 11, y: 16, z: -30}
+  _rotation: {x: 33, y: 0, z: 0}
+--- !u!4 &422101594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422101592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423055816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,13 +3738,13 @@ MonoBehaviour:
   _cameraDistance: 20
   _pivotPoint: {fileID: 1362342958}
   _camera: {fileID: 1488729224}
-  _moveSpeed: 5
-  _rotateSpeed: 5
-  _scrollSpeed: 5
+  _moveSpeed: 10
+  _rotateSpeed: 10
+  _scrollSpeed: 3
   _minimumScrollDistance: 1
   _maximumScrollDistance: 100
   _virtualBoxTarget: {fileID: 845687967}
-  _virtualBoxSize: {x: 300, y: 30, z: 300}
+  _virtualBoxSize: {x: 650, y: 50, z: 650}
   currentPlanetSize: 0
 --- !u!1 &1373634223
 GameObject:
@@ -4081,8 +4128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488729221}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6652,3 +6699,4 @@ SceneRoots:
   - {fileID: 959162776}
   - {fileID: 1320759195}
   - {fileID: 1555308758}
+  - {fileID: 422101594}
