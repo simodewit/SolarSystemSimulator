@@ -662,6 +662,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3810164506224972187, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Een gasreus ver van de zon, met sterke winden, lage temperaturen en
+        een atmosfeer rijk aan waterstof, helium en methaan.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Neptunus
+      objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
       value: 10
