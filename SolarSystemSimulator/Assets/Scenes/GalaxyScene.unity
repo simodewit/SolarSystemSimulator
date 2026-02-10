@@ -3750,6 +3750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4280524166990466614, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
+      propertyPath: m_text
+      value: Jupiter
+      objectReference: {fileID: 0}
     - target: {fileID: 4796305391350782600, guid: 4cf91483ef6d3f64ca09f64d589778a0, type: 3}
       propertyPath: _sceneIndex
       value: 2
